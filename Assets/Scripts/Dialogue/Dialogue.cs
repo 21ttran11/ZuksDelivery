@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue : MonoBehaviour
+namespace DialogueSystem
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Dialogue : MonoBehaviour
     {
+        [SerializeField]
+        List<string> lines;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public List<string> Lines
+        {
+            get { return lines; } // access lines
+        }
     }
 }
+
