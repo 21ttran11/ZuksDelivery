@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.ComponentModel;
 
 namespace DialogueSystem
 {
@@ -17,10 +18,10 @@ namespace DialogueSystem
         {
             Instance = this; //exposing dialogueholder to world so any class can use this
         }
-        public void ShowDialogue()
+        public void ShowDialogue(Dialogue dialogue)
         {
             dialogBox.SetActive(true);
-            // StartCoroutine(TypeDialogue());
+            StartCoroutine(TypeDialogue(dialogue.Lines[0]));
         }
 
         public IEnumerator TypeDialogue(string line)

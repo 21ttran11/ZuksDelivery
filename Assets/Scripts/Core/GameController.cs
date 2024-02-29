@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     // controller informs game state
     [SerializeField] PlayerController playerController;
 
-    GameState state;
+    readonly GameState state;
 
     private void Update()
     {
