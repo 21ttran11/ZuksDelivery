@@ -5,7 +5,7 @@ using TMPro;
 
 namespace DialogueSystem
 {
-    public class DialogueManager : MonoBehaviour
+    public class DialogueHolder : MonoBehaviour
     {
         [SerializeField] GameObject dialogBox;
         [SerializeField] TextMeshProUGUI dialogueText;
