@@ -11,9 +11,16 @@ namespace DialogueSystem
         [SerializeField] TextMeshProUGUI dialogueText;
         [SerializeField] int lettersPerSeconds;
 
+        public static DialogueHolder Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this; //exposing dialogueholder to world so any class can use this
+        }
         public void ShowDialogue()
         {
             dialogBox.SetActive(true);
+            // StartCoroutine(TypeDialogue());
         }
 
         public IEnumerator TypeDialogue(string line)
