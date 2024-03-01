@@ -58,9 +58,29 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/TaroTile.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/StateLoader.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/CameraFollow.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerAnimator.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/Player/FollowCamera.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerStats.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/GridTerrainGenerator.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PatrolPlatform.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/DebugControls.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/MovementEffector.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Lap.cs" />
     <Compile Include="Assets/Scripts/Core/SoundManager.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/LapTrigger.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Input/PlayerInputActions.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerInput.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PlatformBase.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Bouncer.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/Core/GameController.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PhysicsSimulator.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Teleporter.cs" />
+    <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
