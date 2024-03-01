@@ -62,6 +62,7 @@
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\StateLoader.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerAnimator.cs" />
+    <Compile Include="Assets\Scripts\Triggers\Interactions\ActionDialogue.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\GridTerrainGenerator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Platforms\PatrolPlatform.cs" />
@@ -70,10 +71,13 @@
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Lap.cs" />
     <Compile Include="Assets\Scripts\Core\SoundManager.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\LapTrigger.cs" />
+    <Compile Include="Assets\Scripts\Triggers\Interactions\ActionTrigger.cs" />
+    <Compile Include="Assets\Scripts\Triggers\Interactions\SceneAction.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Input\PlayerInputActions.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Platforms\PlatformBase.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Bouncer.cs" />
+    <Compile Include="Assets\Scripts\Triggers\Interactions\ObjectActivator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PhysicsSimulator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Teleporter.cs" />
