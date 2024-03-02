@@ -74,6 +74,7 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/LapTrigger.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionTrigger.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/SceneAction.cs" />
+    <Compile Include="Assets/Scripts/Travel/TravelManager.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerInput.cs" />
     <Compile Include="Assets/Scripts/Travel/NoteObject.cs" />

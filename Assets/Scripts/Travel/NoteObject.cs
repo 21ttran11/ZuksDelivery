@@ -10,23 +10,25 @@ public class NoteObject : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(keyToPress))
+        if (Input.GetKeyDown(keyToPress))
         {
-            if(canBePressed)
+            if (canBePressed)
             {
                 gameObject.SetActive(false);
+
+                TravelManager.instance.NoteHit();
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Activator")
+        if (collision.tag == "Activator")
         {
             canBePressed = true;
         }
@@ -34,9 +36,12 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Activator")
+
+        if (collision.tag == "Activator" && gameObject.activeSelf)
         {
             canBePressed = false;
+
+            TravelManager.instance.NoteMissed();
         }
     }
 }
