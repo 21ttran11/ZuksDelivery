@@ -1,0 +1,26 @@
+title: Start
+position: -9,-100
+---
+<<declare $characterName = "Player">>
+
+Narrator: Hi there!
+Narrator: What's your name?
+    -> My name is just Zuk.
+        <<set $characterName to "Zuk">>
+    -> My name is Zucchini.
+        <<set $characterName to "Zucchini">>
+Narrator: Ah, nice to meet you, {$characterName}!
+<<jump Continuation>>
+===
+
+title: Continuation
+position: -140,92
+---
+$characterName: I'm just here for the demo...
+$characterName: Although that was not in the job description either.
+Narrator: What's the demo showing?
+    -> I can talk to you can't I?
+        Narrator: Oh right, that's nice. How about that bulletin board over there?
+    -> How do you think we are having this conversation right now?
+        Narrator: Uh ... because of YarnSpinner? Nevermind, what about that board? 
+===
