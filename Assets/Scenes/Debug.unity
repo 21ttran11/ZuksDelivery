@@ -860,6 +860,13 @@ MonoBehaviour:
   - {fileID: 432385966}
   - {fileID: 930971007}
   timeBetweenNotes: 0.4
+  stats: {fileID: 11400000, guid: 894dfe33661263b42a8e1490d64c0424, type: 2}
+  originalSpeed: 0
+  slowSpeed: 0.5
+  cinemachineCamera: {fileID: 1924540749}
+  targetSize: 18
+  zoomDuration: 0.4
+  originalSize: 20
 --- !u!1 &637689709
 GameObject:
   m_ObjectHideFlags: 0

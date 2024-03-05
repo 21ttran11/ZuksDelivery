@@ -80,5 +80,10 @@ public class ButtonController : MonoBehaviour
         buttonImage.sprite = defaultImage;
     }
 
+    public void ResetToDefaultState()
+    {
+        buttonImage.sprite = defaultImage;
+        isPressed = false;
+    }
 }
 

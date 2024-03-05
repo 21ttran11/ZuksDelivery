@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TarodevController;
 using UnityEngine;
+using Cinemachine;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -11,27 +13,45 @@ public class ButtonManager : MonoBehaviour
     private bool isSequencePlaying;
     private bool isPlayerTurn;
     private bool isSequenceCompleted = false;
+    public PlayerStats stats;
 
+    public float originalSpeed;
+    public float slowSpeed = 3f;
+
+    public CinemachineVirtualCamera cinemachineCamera;
+    public float targetSize = 18f;
+    public float zoomDuration = 2f;
+    public float originalSize = 20f;
+
+    private void Awake()
+    {
+        originalSpeed = stats.BaseSpeed;
+    }
 
     IEnumerator PlaySequence()
     {
         isSequencePlaying = true;
+        UpdateSpeed(slowSpeed);
+        StartZoomIn();
         isPlayerTurn = false;
         sequence = GenerateRandomSequence(4);
 
-        // Display the sequence
+        float lastTime = Time.realtimeSinceStartup;
         foreach (int buttonIndex in sequence)
         {
             buttons[buttonIndex].PressButton();
-            yield return new WaitForSeconds(timeBetweenNotes);
+            yield return new WaitForSecondsRealtime(timeBetweenNotes);
             buttons[buttonIndex].ReleaseButton();
-            yield return new WaitForSeconds(timeBetweenNotes);
+            // Wait for an additional period accounting for realtime
+            while (Time.realtimeSinceStartup < lastTime + timeBetweenNotes * 2) yield return null;
+            lastTime = Time.realtimeSinceStartup;
         }
 
         isSequencePlaying = false;
         isPlayerTurn = true;
         sequenceIndex = 0;
     }
+
 
     List<int> GenerateRandomSequence(int length)
     {
@@ -48,6 +68,7 @@ public class ButtonManager : MonoBehaviour
         if (isSequenceCompleted)
         {
             return;
+            
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -62,9 +83,11 @@ public class ButtonManager : MonoBehaviour
                 Debug.Log("D key released. Ending the current sequence.");
                 StopAllCoroutines();
                 StopAllBlinking();
+                StartZoomOut();
+                ResetAllButtons();
                 isPlayerTurn = false;
                 isSequencePlaying = false;
-
+                UpdateSpeed(originalSpeed);
                 sequenceIndex = 0;
             }
             return;
@@ -95,6 +118,9 @@ public class ButtonManager : MonoBehaviour
                             Debug.Log("Sequence complete. Travel Sequence Intitated");
                             isPlayerTurn = false;
                             isSequenceCompleted = true;
+                            UpdateSpeed(originalSpeed);
+                            ResetAllButtons();
+                            StartZoomOut();
                         }
                     }
                     else
@@ -121,10 +147,62 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-
     IEnumerator ReleaseButtonAfterDelay(ButtonController button)
     {
         yield return new WaitForSeconds(timeBetweenNotes);
         button.ReleaseButton();
+    }
+
+    public void UpdateSpeed(float newSpeed)
+    {
+        stats.BaseSpeed = newSpeed;
+    }
+
+    private void ResetAllButtons()
+    {
+        foreach (var button in buttons)
+        {
+            button.ResetToDefaultState();
+        }
+    }
+
+    IEnumerator ZoomCameraIn()
+    {
+        float currentTime = 0f;
+        float startSize = cinemachineCamera.m_Lens.OrthographicSize;
+
+
+        while (currentTime < zoomDuration)
+        {
+            currentTime += Time.deltaTime;
+            float t = currentTime / zoomDuration;
+            cinemachineCamera.m_Lens.OrthographicSize = Mathf.Lerp(startSize, targetSize, t);
+            yield return null;
+        }
+    }
+
+    IEnumerator ZoomCameraOut()
+    {
+        float currentTime = 0f;
+        float startSize = cinemachineCamera.m_Lens.OrthographicSize;
+        
+        while (currentTime < zoomDuration)
+        {
+            currentTime += Time.deltaTime;
+            float t = currentTime / zoomDuration;
+            cinemachineCamera.m_Lens.OrthographicSize = Mathf.Lerp(startSize, originalSize, t);
+            yield return null;
+        }
+    }
+
+
+    public void StartZoomIn()
+    {
+        StartCoroutine(ZoomCameraIn());
+    }
+
+    public void StartZoomOut()
+    {
+        StartCoroutine(ZoomCameraOut());
     }
 }
