@@ -66,6 +66,7 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerStats.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/GridTerrainGenerator.cs" />
     <Compile Include="Assets/Scripts/Travel/ButtonController.cs" />
+    <Compile Include="Assets/Scripts/Travel/ButtonManager.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PatrolPlatform.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/DebugControls.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/MovementEffector.cs" />
@@ -74,15 +75,12 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/LapTrigger.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionTrigger.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/SceneAction.cs" />
-    <Compile Include="Assets/Scripts/Travel/TravelManager.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerInput.cs" />
-    <Compile Include="Assets/Scripts/Travel/NoteObject.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PlatformBase.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Bouncer.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ObjectActivator.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerController.cs" />
-    <Compile Include="Assets/Scripts/Travel/BeatScroller.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PhysicsSimulator.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Teleporter.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />

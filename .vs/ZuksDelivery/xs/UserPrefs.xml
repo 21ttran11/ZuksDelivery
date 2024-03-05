@@ -1,30 +1,35 @@
 ﻿<Properties StartupConfiguration="{A5A4D4AF-944D-C693-A670-6D2107DBD61E}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e80410ac-88a3-4072-835e-7da88d2317c4" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Travel/NoteObject.cs">
     <Files>
-      <File FileName="Assets/Scripts/Triggers/Interactions/ActionTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Triggers/Interactions/ActionDialogue.cs" Line="8" Column="6" />
-      <File FileName="Assets/Scripts/Triggers/Interactions/ObjectActivator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Travel/ButtonController.cs" Line="28" Column="25" />
-      <File FileName="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerStats.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Travel/BeatScroller.cs" Line="27" Column="33" />
-      <File FileName="Assets/Scripts/Travel/NoteObject.cs" Line="22" Column="45" />
+      <File FileName="Assets/Scripts/Travel/ButtonController.cs" />
+      <File FileName="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerStats.cs" />
+      <File FileName="Assets/Scripts/Travel/BeatScroller.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Travel/NoteObject.cs" Line="45" Column="10" />
+      <File FileName="Assets/Scripts/Travel/TravelManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ZuksDelivery" selected="True">
-            <Node name="Assets" expanded="True" />
+          <Node name="ZuksDelivery" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Core" expanded="True" />
+                <Node name="Travel" expanded="True" />
+                <Node name="Triggers" expanded="True">
+                  <Node name="Interactions" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ba551aba-b6a9-4090-9fae-84db0002144a" />
 </Properties>
