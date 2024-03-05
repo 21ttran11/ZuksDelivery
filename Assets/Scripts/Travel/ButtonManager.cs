@@ -92,7 +92,7 @@ public class ButtonManager : MonoBehaviour
                         sequenceIndex++;
                         if (sequenceIndex >= sequence.Count)
                         {
-                            Debug.Log("Sequence complete. You've successfully completed the challenge!");
+                            Debug.Log("Sequence complete. Travel Sequence Intitated");
                             isPlayerTurn = false;
                             isSequenceCompleted = true;
                         }
