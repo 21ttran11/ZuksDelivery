@@ -5888,8 +5888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2c1abcfee2c4d869d8f1352ad39def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1016979549
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,7 +6487,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1140818477}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0f53136e5cd15d04d99b73ec33b87d0b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -7738,7 +7736,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 3054942121040353300}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 20
