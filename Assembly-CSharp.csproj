@@ -62,11 +62,15 @@
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\StateLoader.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerAnimator.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Triggers\Interactions\ActionDialogue.cs" />
+    <Compile Include="Assets\Scripts\Checks\Ground.cs" />
+    <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\GridTerrainGenerator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Platforms\PatrolPlatform.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\DebugControls.cs" />
+    <Compile Include="Assets\Scripts\Player\AIController.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\MovementEffector.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Lap.cs" />
     <Compile Include="Assets\Scripts\Core\SoundManager.cs" />
@@ -79,9 +83,11 @@
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Bouncer.cs" />
     <Compile Include="Assets\Scripts\Triggers\Interactions\ObjectActivator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\Move.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PhysicsSimulator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Teleporter.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\Platforms\RadialPlatform.cs" />
+    <Compile Include="Assets\Settings\Input\PlayerInputActions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
