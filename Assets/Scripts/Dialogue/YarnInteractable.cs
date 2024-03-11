@@ -8,6 +8,7 @@ public class YarnInteractable : MonoBehaviour
     private DialogueRunner dialogueRunner;
     [SerializeField] private string conversationStartNode;
     private bool interactable;
+    private bool isCurrentConversation;
 
     private void Update()
     {
@@ -23,6 +24,7 @@ public class YarnInteractable : MonoBehaviour
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
+        dialogueRunner.onDialogueComplete.AddListener(EndConversation);
     }
     private void StartConversation()
     {
@@ -31,12 +33,15 @@ public class YarnInteractable : MonoBehaviour
 
     private void EndConversation()
     {
-        return;
+        if (isCurrentConversation)
+        {
+            isCurrentConversation = false;
+        }
     }
 
-    private void DisableConversation()
+    [YarnCommand("disable")]
+    public void DisableConversation()
     {
-        return;
+        interactable = false;
     }
-
 }
