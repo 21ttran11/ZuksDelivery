@@ -26,19 +26,17 @@ public class Ground : MonoBehaviour
     }
     private void EvaluateCollision(Collision2D collision)
     {
-        for (int i = 0; i < collision.contactCount; i++)
+        for(int i = 0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
-            onGround = normal.y >= 0.9f;
+            onGround |= normal.y >= 0.9f;
         }
     }
 
     private void RetrieveFriction(Collision2D collision)
     {
         PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
-
         friction = 0;
-
         if(material != null)
         {
             friction = material.friction;
