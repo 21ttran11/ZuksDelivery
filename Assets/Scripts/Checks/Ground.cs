@@ -10,13 +10,11 @@ public class Ground : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         EvaluateCollision(collision);
-        RetrieveFriction(collision);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         EvaluateCollision(collision);
-        RetrieveFriction(collision);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -30,16 +28,6 @@ public class Ground : MonoBehaviour
         {
             Vector2 normal = collision.GetContact(i).normal;
             onGround |= normal.y >= 0.9f;
-        }
-    }
-
-    private void RetrieveFriction(Collision2D collision)
-    {
-        PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
-        friction = 0;
-        if(material != null)
-        {
-            friction = material.friction;
         }
     }
 

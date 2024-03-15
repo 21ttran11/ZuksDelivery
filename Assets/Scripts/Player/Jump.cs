@@ -19,6 +19,8 @@ public class Jump : MonoBehaviour
 
     private bool desiredJump;
     private bool onGround;
+    private bool isJumping;
+    private bool isJumpReset;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,13 +28,14 @@ public class Jump : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
 
+        isJumpReset = true;
         defaultGravityScale = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        desiredJump |= input.RetrieveJumpInput();
+        desiredJump = input.RetrieveJumpInput(gameObject);
     }
 
     private void FixedUpdate()
@@ -45,18 +48,21 @@ public class Jump : MonoBehaviour
             jumpPhase = 0;
         }
 
-        if (desiredJump)
+        if (desiredJump && isJumpReset)
         {
+            isJumpReset = false;
             desiredJump = false;
             JumpAction();
         }
-
-        if(body.velocity.y > 0)
+        else if (!desiredJump)
+        {
+            isJumpReset = true;
+        }
+        if (body.velocity.y > 0)
         {
             body.gravityScale = upwardMovementMultiplier;
         }
-
-        else if(body.velocity.y == 0)
+        else if (body.velocity.y == 0)
         {
             body.gravityScale = defaultGravityScale;
         }

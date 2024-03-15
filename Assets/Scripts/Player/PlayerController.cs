@@ -6,13 +6,42 @@ using UnityEngine;
 
 public class PlayerController : InputController
 {
-    public override bool RetrieveJumpInput()
+    private PlayerInputActions inputActions;
+    private bool isJumping;
+
+    private void OnEnable()
     {
-        return Input.GetButtonDown("Jump");
+        inputActions = new PlayerInputActions();
+        inputActions.Gameplay.Enable();
+        inputActions.Gameplay.Jump.started += JumpStarted;
+        inputActions.Gameplay.Jump.canceled += JumpCanceled;
     }
 
-    public override float RetrieveMoveInput()
+    private void OnDisable()
     {
-        return Input.GetAxisRaw("Horizontal");
+        inputActions.Gameplay.Disable();
+        inputActions.Gameplay.Jump.started -= JumpStarted;
+        inputActions.Gameplay.Jump.canceled -= JumpCanceled;
+        inputActions = null;
+    }
+
+    private void JumpCanceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        isJumping = false;
+    }
+
+    private void JumpStarted(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        isJumping = true;
+    }
+
+    public override bool RetrieveJumpInput(GameObject gameObject)
+    {
+        return isJumping;
+    }
+
+    public override float RetrieveMoveInput(GameObject gameObject)
+    {
+        return inputActions.Gameplay.Move.ReadValue<Vector2>().x;
     }
 }

@@ -384,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 917979124}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.69, y: 0.23, z: 0}
+  m_LocalPosition: {x: -8.78, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 11.0249, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 1283495072}
   - component: {fileID: 1283495071}
   - component: {fileID: 1283495070}
+  - component: {fileID: 1283495073}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -520,6 +521,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1283495073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283495069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd2bf812019fb64fbe3d4f1028fa3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1301760998
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +676,8 @@ GameObject:
   - component: {fileID: 1714342816}
   - component: {fileID: 1714342815}
   - component: {fileID: 1714342814}
-  - component: {fileID: 1714342813}
   - component: {fileID: 1714342819}
+  - component: {fileID: 1714342820}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -672,18 +685,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1714342813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714342812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd2bf812019fb64fbe3d4f1028fa3d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1714342814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +857,18 @@ MonoBehaviour:
   maxAirJumps: 0
   downwardMovementMultiplier: 3
   upwardMovementMultiplier: 1.7
+--- !u!114 &1714342820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714342812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd2bf812019fb64fbe3d4f1028fa3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
