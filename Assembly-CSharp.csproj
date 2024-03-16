@@ -68,6 +68,8 @@
     <Compile Include="Assets/Scripts/Player/InputController.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerStats.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/GridTerrainGenerator.cs" />
+    <Compile Include="Assets/Scripts/Travel/ButtonController.cs" />
+    <Compile Include="Assets/Scripts/Travel/ButtonManager.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PatrolPlatform.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/DebugControls.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/MovementEffector.cs" />
