@@ -5,29 +5,56 @@ using Yarn.Unity;
 
 public class YarnInteractable : MonoBehaviour
 {
-    private DialogueRunner dialogueRunner;
+    // internal properties exposed to editor
     [SerializeField] private string conversationStartNode;
-    private bool interactable;
-    private bool isCurrentConversation;
 
-    private void Update()
+    // internal properties not exposed to editor
+    private DialogueRunner dialogueRunner;
+    private Light lightIndicatorObject = null;
+    private bool interactable = true;
+    private bool isCurrentConversation = false;
+    private float defaultIndicatorIntensity;
+
+    public void Start()
     {
-        if (Input.GetKeyDown("q"))
+        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+        dialogueRunner.onDialogueComplete.AddListener(EndConversation);
+        lightIndicatorObject = GetComponentInChildren<Light>();
+        // get starter intensity of light then
+        // if we're using it as an indicator => hide it 
+        if (lightIndicatorObject != null)
         {
-            if(interactable && !dialogueRunner.IsDialogueRunning)
+            defaultIndicatorIntensity = lightIndicatorObject.intensity;
+            lightIndicatorObject.intensity = 0;
+        }
+    }
+
+    public void OnMouseDown()
+    {
+        if (interactable && !dialogueRunner.IsDialogueRunning)
+        {
+            StartConversation();
+        }
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (interactable && !dialogueRunner.IsDialogueRunning)
             {
                 StartConversation();
             }
         }
     }
 
-    private void Start()
-    {
-        dialogueRunner = FindObjectOfType<DialogueRunner>();
-        dialogueRunner.onDialogueComplete.AddListener(EndConversation);
-    }
     private void StartConversation()
     {
+        Debug.Log($"Started conversation with {name}.");
+        isCurrentConversation = true;
+        // if (lightIndicatorObject != null) {
+        //     lightIndicatorObject.intensity = defaultIndicatorIntensity;
+        // }
         dialogueRunner.StartDialogue(conversationStartNode);
     }
 
@@ -35,11 +62,15 @@ public class YarnInteractable : MonoBehaviour
     {
         if (isCurrentConversation)
         {
+            // if (lightIndicatorObject != null) {
+            //     lightIndicatorObject.intensity = 0;
+            // }
             isCurrentConversation = false;
+            Debug.Log($"Started conversation with {name}.");
         }
     }
 
-    [YarnCommand("disable")]
+    //    [YarnCommand("disable")]
     public void DisableConversation()
     {
         interactable = false;

@@ -1,4 +1,4 @@
-title: Start
+title: Computer
 position: -9,-100
 ---
 <<declare $characterName = "Player">>

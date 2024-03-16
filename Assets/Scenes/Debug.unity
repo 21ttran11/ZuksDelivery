@@ -683,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276.3, y: 43.3}
+  m_AnchoredPosition: {x: -3, y: 117}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &590506360
@@ -718,7 +718,7 @@ MonoBehaviour:
   showCharacterNameInLineView: 1
   characterNameText: {fileID: 1801004665}
   characterNameContainer: {fileID: 1801004663}
-  useTypewriterEffect: 0
+  useTypewriterEffect: 1
   onCharacterTyped:
     m_PersistentCalls:
       m_Calls: []
@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca56fde22fb5465ba53ec056da8b2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationStartNode: Start
+  conversationStartNode: Computer
 --- !u!1 &637689709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbc7f18bac4f8a468fa3153adb614cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionIcon: {fileID: 21300000, guid: 567c1f083768bbf4899d4c70e43c5857, type: 3}
 --- !u!224 &720726818 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
