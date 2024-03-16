@@ -728,7 +728,7 @@ MonoBehaviour:
   onPauseEnded:
     m_PersistentCalls:
       m_Calls: []
-  typewriterEffectSpeed: 0
+  typewriterEffectSpeed: 15
   continueButton: {fileID: 0}
   holdTime: 1
   autoAdvance: 0
@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca56fde22fb5465ba53ec056da8b2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionIcon: {fileID: 0}
   conversationStartNode: Computer
 --- !u!1 &637689709
 GameObject:
@@ -968,7 +969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 756.5618
+      value: 613.6282
       objectReference: {fileID: 0}
     - target: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1016,7 +1017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -19.00003
+      value: 15.4589
       objectReference: {fileID: 0}
     - target: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1138,9 +1139,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 692452711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edbc7f18bac4f8a468fa3153adb614cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ca56fde22fb5465ba53ec056da8b2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionIcon: {fileID: 21300000, guid: 567c1f083768bbf4899d4c70e43c5857, type: 3}
+  conversationStartNode: Computer
 --- !u!224 &720726818 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
@@ -1474,7 +1477,7 @@ MonoBehaviour:
   - {fileID: 590506361}
   - {fileID: 720726822}
   startNode: Start
-  startAutomatically: 1
+  startAutomatically: 0
   runSelectedOptionAsLine: 0
   lineProvider: {fileID: 0}
   verboseLogging: 1
@@ -44519,7 +44522,7 @@ PrefabInstance:
     - target: {fileID: 1285607086760961324, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: sceneAction
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 692452713}
     - target: {fileID: 3049154763606217402, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_Name
       value: SceneInteraction

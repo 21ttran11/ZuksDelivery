@@ -11,7 +11,7 @@ public class ActionTrigger : MonoBehaviour
         {
             sceneAction.Interact();
             this.gameObject.SetActive(false);
-        }
 
+        }
     }
 }

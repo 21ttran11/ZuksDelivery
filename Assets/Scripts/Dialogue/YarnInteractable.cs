@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class YarnInteractable : MonoBehaviour
+public class YarnInteractable : SceneAction
 {
-    // internal properties exposed to editor
     [SerializeField] private string conversationStartNode;
+    private bool dialogue;
+    public override void Interact()
+    {
+        Debug.Log("Dialogue is triggered");
+    }
 
     // internal properties not exposed to editor
     private DialogueRunner dialogueRunner;
-    private Light lightIndicatorObject = null;
     private bool interactable = true;
     private bool isCurrentConversation = false;
     private float defaultIndicatorIntensity;
@@ -19,22 +22,6 @@ public class YarnInteractable : MonoBehaviour
     {
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
-        lightIndicatorObject = GetComponentInChildren<Light>();
-        // get starter intensity of light then
-        // if we're using it as an indicator => hide it 
-        if (lightIndicatorObject != null)
-        {
-            defaultIndicatorIntensity = lightIndicatorObject.intensity;
-            lightIndicatorObject.intensity = 0;
-        }
-    }
-
-    public void OnMouseDown()
-    {
-        if (interactable && !dialogueRunner.IsDialogueRunning)
-        {
-            StartConversation();
-        }
     }
 
     public void Update()
@@ -52,9 +39,6 @@ public class YarnInteractable : MonoBehaviour
     {
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
-        // if (lightIndicatorObject != null) {
-        //     lightIndicatorObject.intensity = defaultIndicatorIntensity;
-        // }
         dialogueRunner.StartDialogue(conversationStartNode);
     }
 
@@ -62,9 +46,6 @@ public class YarnInteractable : MonoBehaviour
     {
         if (isCurrentConversation)
         {
-            // if (lightIndicatorObject != null) {
-            //     lightIndicatorObject.intensity = 0;
-            // }
             isCurrentConversation = false;
             Debug.Log($"Started conversation with {name}.");
         }
