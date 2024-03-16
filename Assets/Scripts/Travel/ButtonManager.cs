@@ -13,7 +13,7 @@ public class ButtonManager : MonoBehaviour
     private bool isSequencePlaying;
     private bool isPlayerTurn;
     private bool isSequenceCompleted = false;
-    public PlayerStats stats;
+    public Move playerMovement;
 
     public float originalSpeed;
     public float slowSpeed = 3f;
@@ -25,7 +25,7 @@ public class ButtonManager : MonoBehaviour
 
     private void Awake()
     {
-        originalSpeed = stats.BaseSpeed;
+        originalSpeed = playerMovement.maxSpeed;
     }
 
     IEnumerator PlaySequence()
@@ -155,7 +155,7 @@ public class ButtonManager : MonoBehaviour
 
     public void UpdateSpeed(float newSpeed)
     {
-        stats.BaseSpeed = newSpeed;
+        playerMovement.maxSpeed = newSpeed;
     }
 
     private void ResetAllButtons()
