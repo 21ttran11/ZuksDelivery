@@ -121,6 +121,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/Player/Move.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PhysicsSimulator.cs" />
+    <Compile Include="Assets/Scripts/Triggers/Interactions/ActionPickup.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Teleporter.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />
     <Compile Include="Assets/Settings/Input/PlayerInputActions.cs" />
