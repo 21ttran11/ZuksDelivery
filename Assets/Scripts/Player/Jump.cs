@@ -7,7 +7,7 @@ public class Jump : MonoBehaviour
     [SerializeField] private InputController input = null;
     [SerializeField, Range(0f, 10f)] private float jumpHeight = 3f;
     [SerializeField, Range(0f, 5)] private int maxAirJumps = 0;
-    [SerializeField, Range(0f, 5f)] private float downwardMovementMultiplier = 3f;
+//  [SerializeField, Range(0f, 5f)] private float downwardMovementMultiplier = 3f;
     [SerializeField, Range(0f, 5f)] private float upwardMovementMultiplier = 1.7f;
 
     private Rigidbody2D body;
@@ -21,10 +21,12 @@ public class Jump : MonoBehaviour
     private bool onGround;
     private bool isJumping;
     private bool isJumpReset;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Awake()
     {
+        animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
 
@@ -45,6 +47,11 @@ public class Jump : MonoBehaviour
 
         if (onGround)
         {
+            if (isJumping)
+            {
+                isJumping = false;
+                animator.SetBool("Jump", false);
+            }
             jumpPhase = 0;
         }
 
@@ -75,6 +82,8 @@ public class Jump : MonoBehaviour
         if(onGround || jumpPhase < maxAirJumps)
         {
             jumpPhase += 1;
+            isJumping = true;
+            animator.SetBool("Jump", true);
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
             if(velocity.y > 0f)
             {

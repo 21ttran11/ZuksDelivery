@@ -18,9 +18,11 @@ public class Move : MonoBehaviour
     private float maxSpeedChange;
     private float acceleration;
     private bool onGround;
+    private Animator animator;
 
     void Awake()
     {
+        animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
     }
@@ -30,11 +32,17 @@ public class Move : MonoBehaviour
     {
         direction.x = input.RetrieveMoveInput(gameObject);
         desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
+
+        if (direction.x != 0f && Mathf.Sign(transform.localScale.x) != Mathf.Sign(direction.x))
+        {
+            FlipCharacter();
+        }
     }
 
     private void FixedUpdate()
     {
         onGround = ground.GetOnGround();
+        animator.SetBool("Grounded", onGround);
         velocity = body.velocity;
 
         acceleration = onGround ? maxAcceleration : maxAirAcceleration;
@@ -42,5 +50,13 @@ public class Move : MonoBehaviour
         velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
 
         body.velocity = velocity;
+        animator.SetFloat("IdleSpeed", Mathf.Abs(velocity.x));
+    }
+
+    private void FlipCharacter()
+    {
+        Vector3 flippedScale = transform.localScale;
+        flippedScale.x *= -1f;
+        transform.localScale = flippedScale;
     }
 }
