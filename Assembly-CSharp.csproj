@@ -54,7 +54,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="/Users/tiffanytran/Documents/GitHub/ZuksDelivery/Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/SourceGenerator/YarnSpinner.Unity.SourceCodeGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -404,47 +403,14 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Yarn.System.Text.Encodings.Web">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner.Compiler">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/YarnSpinner.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.Microsoft.Win32.SystemEvents">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.Microsoft.Win32.SystemEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.System.Drawing.Common">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Drawing.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.System.IO.Packaging">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.IO.Packaging.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Yarn.Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.System.Threading.Tasks.Extensions">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.Microsoft.Extensions.FileSystemGlobbing">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.System.Text.Json">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Text.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Yarn.System.CommandLine">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.CommandLine.dll</HintPath>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -878,9 +844,6 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="YarnSpinnerTests.CommandsInAnAssemblyDefinition">
-      <HintPath>Library/ScriptAssemblies/YarnSpinnerTests.CommandsInAnAssemblyDefinition.dll</HintPath>
-    </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
@@ -898,9 +861,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner.Unity.Editor">
-      <HintPath>Library/ScriptAssemblies/YarnSpinner.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
@@ -958,9 +918,6 @@
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner.Unity">
-      <HintPath>Library/ScriptAssemblies/YarnSpinner.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
