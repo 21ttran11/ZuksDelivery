@@ -116,6 +116,7 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Bouncer.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ObjectActivator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
+    <Compile Include="Assets/Scripts/UI/InvisibleCursor.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerController.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PhysicsSimulator.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionPickup.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Teleporter.cs" />
+    <Compile Include="Assets/Scripts/MouseMovement.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />
     <Compile Include="Assets/Settings/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
