@@ -65,6 +65,7 @@
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\_Demo\Scripts\StateLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Locker Game\Locker Detection.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
