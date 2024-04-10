@@ -8,7 +8,7 @@ public class ClickHandler : MonoBehaviour
     [SerializeField]
     public GameObject[] lockersArray;
     public GameObject[] dialogueArray;
-    private GameObject lockerClicked;
+    private GameObject itemClicked;
     private GameObject dialogue;
 
     private Camera mainCamera;
@@ -26,27 +26,36 @@ public class ClickHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
         Debug.Log(rayHit.collider.gameObject.name);
-        lockerClicked = rayHit.collider.gameObject;
-        CheckLocker();
+        itemClicked = rayHit.collider.gameObject;
+        CheckClicked();
     }
 
-    public void CheckLocker()
+    private void Update()
+    {
+        
+    }
+
+    public void CheckClicked()
     {
         for (int i = 0; i < lockersArray.Length; i++)
         {
-            if(lockerClicked == lockersArray[i])
+            if(itemClicked == lockersArray[i])
             {
                 Debug.Log("Locker matched: " + lockersArray[i].name);
                 dialogue = dialogueArray[i];
                 DeactivateLocker();
-
             }
+        }
+
+        if (itemClicked.CompareTag("Heelies"))
+        {
+            Debug.Log("Fall Animation Trigger");
         }
     }
 
     public void DeactivateLocker()
     {
-        lockerClicked.SetActive(false);
+        itemClicked.SetActive(false);
         Debug.Log("Opening Locker");
         StartDelay();
     }
