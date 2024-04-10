@@ -7,7 +7,9 @@ public class ClickHandler : MonoBehaviour
 {
     [SerializeField]
     public GameObject[] lockersArray;
+    public GameObject[] dialogueArray;
     private GameObject lockerClicked;
+    private GameObject dialogue;
 
     private Camera mainCamera;
 
@@ -35,7 +37,9 @@ public class ClickHandler : MonoBehaviour
             if(lockerClicked == lockersArray[i])
             {
                 Debug.Log("Locker matched: " + lockersArray[i].name);
+                dialogue = dialogueArray[i];
                 DeactivateLocker();
+
             }
         }
     }
@@ -44,5 +48,23 @@ public class ClickHandler : MonoBehaviour
     {
         lockerClicked.SetActive(false);
         Debug.Log("Opening Locker");
+        StartDelay();
+    }
+
+    public void StartDelay()
+    {
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(.5f);
+        ActivateDialogue();
+    }
+
+    public void ActivateDialogue()
+    {
+        if (dialogue == null) return;
+        dialogue.SetActive(true);
     }
 }
