@@ -18,7 +18,14 @@ public class HeelieDialogue : MonoBehaviour
     [SerializeField]
     private GameObject locker;
 
+    private bool dialogueDone = false;
+
     private int active;
+
+    private void OnEnable()
+    {
+        heelies.SetActive(true);
+    }
     private void Update()
     {
         ChildrenDeactivated(locker);
@@ -38,14 +45,21 @@ public class HeelieDialogue : MonoBehaviour
 
     private void ChooseDialogue()
     {
-        if (active > 0)
+        if (active > 0 && dialogueDone == false)
         {
             dialogue1.SetActive(true);
+            dialogueDone = true;
         }
 
         if (active == 0)
         {
             dialogueFinal.SetActive(true);
+            heelies.SetActive(true);
+        }
+
+        else
+        {
+            return;
         }
     }
 }
