@@ -2398,6 +2398,7 @@ GameObject:
   - component: {fileID: 934400691}
   - component: {fileID: 934400692}
   - component: {fileID: 934400693}
+  - component: {fileID: 934400694}
   m_Layer: 0
   m_Name: Heelies
   m_TagString: Untagged
@@ -2486,6 +2487,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locker: {fileID: 475532449}
+--- !u!95 &934400694
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934400690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aaf529375fd254d4595182f324c3b64e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1002558566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,6 +3253,7 @@ GameObject:
   - component: {fileID: 1356840629}
   - component: {fileID: 1356840628}
   - component: {fileID: 1356840631}
+  - component: {fileID: 1356840632}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3356,6 +3379,27 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!95 &1356840632
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356840627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e8063c7ceb2c49918c8553444a5aa18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1389594522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,8 +4200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082f40ee49c8b14886f8c85d8050a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heelieFall: {fileID: 0}
-  cameraPan: {fileID: 0}
+  heelieFall: {fileID: 934400694}
+  cameraPan: {fileID: 1356840632}
   heelies: {fileID: 1302594413}
 --- !u!1 &1752254660
 GameObject:
