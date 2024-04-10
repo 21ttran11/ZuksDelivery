@@ -32,7 +32,7 @@ public class HeelieDialogue : MonoBehaviour
         ChooseDialogue();
     }
 
-    private void ChildrenDeactivated(GameObject locker)
+    public void ChildrenDeactivated(GameObject locker)
     {
         foreach (Transform child in locker.transform)
         {
@@ -54,7 +54,6 @@ public class HeelieDialogue : MonoBehaviour
         if (active == 0)
         {
             dialogueFinal.SetActive(true);
-            heelies.SetActive(true);
         }
 
         else
