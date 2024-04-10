@@ -13,6 +13,9 @@ public class HeelieChangeScene : MonoBehaviour
     private GameObject heelies;
     private GameObject itemClicked;
 
+    [SerializeField]
+    private GameObject droppedDialogue;
+
     private bool fell = false;
 
     private void OnEnable()
@@ -50,6 +53,7 @@ public class HeelieChangeScene : MonoBehaviour
         if (fell == false)
         {
             heelieFall.SetBool("Falling", true);
+            droppedDialogue.SetActive(true);
             fell = true;
             CameraPan();
         }
