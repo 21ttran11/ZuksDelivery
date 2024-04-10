@@ -6,17 +6,43 @@ using UnityEngine.InputSystem;
 public class HeelieChangeScene : MonoBehaviour
 {
     public Animator heelieFall;
-    private bool fell = false;
-    public ClickHandler clickHandler;
+    public Animator cameraPan;
+    private Camera mainCamera;
 
-    private void Update()
-    {
-        clickHandler = FindObjectOfType<ClickHandler>();
-    }
+    [SerializeField]
+    private GameObject heelies;
+    private GameObject itemClicked;
+
+    private bool fell = false;
 
     private void OnEnable()
     {
         Debug.Log("Heelies are now available");
+    }
+    private void Update()
+    {
+        mainCamera = Camera.main;
+    }
+
+    public void OnClick(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+
+        var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        if (!rayHit.collider) return;
+
+        itemClicked = rayHit.collider.gameObject;
+        CheckClicked();
+    }
+
+    private void CheckClicked()
+    {
+        if (itemClicked == heelies)
+        {
+            Debug.Log("Heelies clicked from heelies");
+            Fall();
+        }
+        else return;
     }
 
     private void Fall()
@@ -24,7 +50,9 @@ public class HeelieChangeScene : MonoBehaviour
         if (fell == false)
         {
             heelieFall.SetBool("falling", true);
+            cameraPan.SetBool("panning", true);
             fell = true;
         }
+        else return;
     }
 }

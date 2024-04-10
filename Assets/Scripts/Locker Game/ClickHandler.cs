@@ -43,14 +43,14 @@ public class ClickHandler : MonoBehaviour
         }
     }
 
-    public void DeactivateLocker()
+    private void DeactivateLocker()
     {
         itemClicked.SetActive(false);
         Debug.Log("Opening Locker");
         StartDelay();
     }
 
-    public void StartDelay()
+    private void StartDelay()
     {
         StartCoroutine(Delay());
     }
@@ -61,7 +61,7 @@ public class ClickHandler : MonoBehaviour
         ActivateDialogue();
     }
 
-    public void ActivateDialogue()
+    private void ActivateDialogue()
     {
         if (dialogue == null) return;
         dialogue.SetActive(true);

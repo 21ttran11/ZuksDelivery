@@ -791,7 +791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I pop one real quick? Sure he won't notice it missing next to his... divorced
+  m_text: Should I pop one? Sure he won't notice it missing next to his... divorced
     wife? Yikes.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2980,7 +2980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082f40ee49c8b14886f8c85d8050a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heeliefall: {fileID: 0}
+  heelieFall: {fileID: 0}
+  cameraPan: {fileID: 0}
+  heelies: {fileID: 0}
 --- !u!1 &1306553576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,6 +4029,7 @@ GameObject:
   - component: {fileID: 1751947526}
   - component: {fileID: 1751947525}
   - component: {fileID: 1751947524}
+  - component: {fileID: 1751947527}
   m_Layer: 0
   m_Name: ClickHandler
   m_TagString: Untagged
@@ -4107,6 +4110,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1751947527}
+        m_TargetAssemblyTypeName: HeelieChangeScene, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2410cc98-e46a-48c6-a339-e6c3b987ad75
     m_ActionName: Gameplay/Click[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
@@ -4123,12 +4138,27 @@ Transform:
   m_GameObject: {fileID: 1751947523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8793392, y: -2.5582716, z: -0.0033766972}
+  m_LocalPosition: {x: -8.94, y: 4.6, z: -0.0033766972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751947527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751947523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f082f40ee49c8b14886f8c85d8050a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heelieFall: {fileID: 0}
+  cameraPan: {fileID: 0}
+  heelies: {fileID: 1302594413}
 --- !u!1 &1752254660
 GameObject:
   m_ObjectHideFlags: 0
