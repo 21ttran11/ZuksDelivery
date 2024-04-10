@@ -50,9 +50,14 @@ public class HeelieChangeScene : MonoBehaviour
         if (fell == false)
         {
             heelieFall.SetBool("Falling", true);
-            cameraPan.SetBool("Panning", true);
             fell = true;
+            CameraPan();
         }
         else return;
+    }
+
+    private void CameraPan()
+    {
+        cameraPan.SetBool("Panning", true);
     }
 }
