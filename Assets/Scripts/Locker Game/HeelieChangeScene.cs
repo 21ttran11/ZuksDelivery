@@ -7,6 +7,7 @@ public class HeelieChangeScene : MonoBehaviour
 {
     public Animator heelieFall;
     public Animator cameraPan;
+
     private Camera mainCamera;
 
     [SerializeField]
