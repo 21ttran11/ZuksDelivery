@@ -2584,6 +2584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1302594414}
   - component: {fileID: 1302594415}
+  - component: {fileID: 1302594416}
   m_Layer: 0
   m_Name: Logic Heelies
   m_TagString: Untagged
@@ -2641,6 +2642,18 @@ CircleCollider2D:
   m_Offset: {x: 0.0023858468, y: 0}
   serializedVersion: 2
   m_Radius: 0.943714
+--- !u!114 &1302594416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302594413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f082f40ee49c8b14886f8c85d8050a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306553576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,7 +3590,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue1: {fileID: 1055724729}
   dialogueFinal: {fileID: 1002558566}
-  heelies: {fileID: 934400690}
   locker: {fileID: 475532449}
 --- !u!1 &1553529707
 GameObject:

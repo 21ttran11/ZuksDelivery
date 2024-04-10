@@ -13,19 +13,12 @@ public class HeelieDialogue : MonoBehaviour
     private GameObject dialogueFinal;
 
     [SerializeField]
-    private GameObject heelies;
-
-    [SerializeField]
     private GameObject locker;
 
     private bool dialogueDone = false;
 
     private int active;
 
-    private void OnEnable()
-    {
-        heelies.SetActive(true);
-    }
     private void Update()
     {
         ChildrenDeactivated(locker);
