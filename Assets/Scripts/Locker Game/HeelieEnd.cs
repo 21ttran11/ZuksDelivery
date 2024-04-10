@@ -10,6 +10,7 @@ public class HeelieEnd : MonoBehaviour
     private int active;
     private void Update()
     {
+        active = 0;
         ChildrenDeactivated(locker);
         CheckEnd();
     }
