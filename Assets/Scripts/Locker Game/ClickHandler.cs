@@ -30,11 +30,6 @@ public class ClickHandler : MonoBehaviour
         CheckClicked();
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void CheckClicked()
     {
         for (int i = 0; i < lockersArray.Length; i++)
@@ -45,11 +40,6 @@ public class ClickHandler : MonoBehaviour
                 dialogue = dialogueArray[i];
                 DeactivateLocker();
             }
-        }
-
-        if (itemClicked.CompareTag("Heelies"))
-        {
-            Debug.Log("Fall Animation Trigger");
         }
     }
 
