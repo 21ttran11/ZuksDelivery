@@ -81,6 +81,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Triggers\Interactions\ActionDialogue.cs" />
     <Compile Include="Assets\Scripts\Checks\Ground.cs" />
+    <Compile Include="Assets\Scripts\Roaches\RoachHandler.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Triggers\Interactions\ActionDisplay.cs" />

@@ -45,6 +45,7 @@ public class HeelieChangeScene : MonoBehaviour
         {
             Debug.Log("Heelies clicked from heelies");
             Fall();
+            gameObject.SetActive(false);
         }
         else return;
     }

@@ -39,6 +39,7 @@ public class ClickHandler : MonoBehaviour
                 Debug.Log("Locker matched: " + lockersArray[i].name);
                 dialogue = dialogueArray[i];
                 DeactivateLocker();
+                break;
             }
         }
     }
