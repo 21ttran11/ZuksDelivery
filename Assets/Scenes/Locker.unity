@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 616779062}
   m_Layer: 0
   m_Name: Roach 3
-  m_TagString: Untagged
+  m_TagString: roach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2492,7 +2492,7 @@ GameObject:
   - component: {fileID: 761645531}
   m_Layer: 0
   m_Name: Roach 1
-  m_TagString: Untagged
+  m_TagString: roach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3438,7 +3438,7 @@ GameObject:
   - component: {fileID: 1122594776}
   m_Layer: 0
   m_Name: Roach 2
-  m_TagString: Untagged
+  m_TagString: roach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3921,6 +3921,7 @@ MonoBehaviour:
   heelieFall: {fileID: 0}
   cameraPan: {fileID: 0}
   heelies: {fileID: 0}
+  roaches: {fileID: 0}
   droppedDialogue: {fileID: 0}
 --- !u!1 &1306553576
 GameObject:
@@ -4994,7 +4995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1650627557
 Transform:
   m_ObjectHideFlags: 0
@@ -5168,6 +5169,7 @@ MonoBehaviour:
   heelieFall: {fileID: 934400694}
   cameraPan: {fileID: 1356840632}
   heelies: {fileID: 1302594413}
+  roaches: {fileID: 1650627556}
   droppedDialogue: {fileID: 1898178660}
 --- !u!114 &1751947528
 MonoBehaviour:
@@ -5181,23 +5183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06736916ec13041468a7373442aea7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roachArray:
-  - {fileID: 761645527}
-  - {fileID: 1122594772}
-  - {fileID: 616779058}
-  - {fileID: 2104547542}
-  heelies: {fileID: 1302594413}
-  roachAnimation:
-  - {fileID: 761645529}
-  - {fileID: 1122594774}
-  - {fileID: 616779062}
-  - {fileID: 2104547546}
-  deadSprite: {fileID: 21300000, guid: 9d3b0f29727518f40876f8648a0f00ff, type: 3}
-  spriteRenderer:
-  - {fileID: 761645530}
-  - {fileID: 1122594775}
-  - {fileID: 616779061}
-  - {fileID: 2104547545}
 --- !u!1 &1752254660
 GameObject:
   m_ObjectHideFlags: 0
@@ -6207,7 +6192,7 @@ GameObject:
   - component: {fileID: 2104547546}
   m_Layer: 0
   m_Name: Roach 4
-  m_TagString: Untagged
+  m_TagString: roach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

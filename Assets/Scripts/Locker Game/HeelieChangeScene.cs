@@ -12,6 +12,9 @@ public class HeelieChangeScene : MonoBehaviour
 
     [SerializeField]
     private GameObject heelies;
+
+    [SerializeField]
+    private GameObject roaches;
     private GameObject itemClicked;
 
     [SerializeField]
@@ -45,6 +48,7 @@ public class HeelieChangeScene : MonoBehaviour
         {
             Debug.Log("Heelies clicked from heelies");
             Fall();
+            roaches.SetActive(true);
             gameObject.SetActive(false);
         }
         else return;
