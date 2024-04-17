@@ -45,7 +45,7 @@ public class HeelieChangeScene : MonoBehaviour
 
     private void CheckClicked()
     {
-        if (itemClicked == heelies)
+        if (itemClicked.CompareTag("heelies"))
         {
             Debug.Log("Heelies clicked from heelies");
             Fall();
