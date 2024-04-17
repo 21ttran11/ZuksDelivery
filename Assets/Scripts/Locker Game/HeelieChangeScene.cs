@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class HeelieChangeScene : MonoBehaviour
@@ -49,7 +50,7 @@ public class HeelieChangeScene : MonoBehaviour
             Debug.Log("Heelies clicked from heelies");
             Fall();
             roaches.SetActive(true);
-            gameObject.SetActive(false);
+            heelies.SetActive(false);
         }
         else return;
     }
@@ -63,7 +64,11 @@ public class HeelieChangeScene : MonoBehaviour
             fell = true;
             CameraPan();
         }
-        else return;
+
+        else if (fell == true) 
+        {
+            SceneManager.LoadScene("PostOffice2");
+        }
     }
 
     private void CameraPan()
