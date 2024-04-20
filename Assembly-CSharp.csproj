@@ -93,14 +93,15 @@
     <Compile Include="Assets/Scripts/Travel/ButtonManager.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PatrolPlatform.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/DebugControls.cs" />
+    <Compile Include="Assets/Scripts/Dialogue/YarnInteractable.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/MovementEffector.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Lap.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
-    <Compile Include="Assets/Scripts/Core/SoundManager.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionSceneChange.cs" />
+    <Compile Include="Assets/Scripts/Core/SoundManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/LapTrigger.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionTrigger.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PhysicsSimulator.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionPickup.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Teleporter.cs" />
+    <Compile Include="Assets/Scripts/Triggers/Interactions/ActionDialogueTravel.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />
     <Compile Include="Assets/Settings/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
@@ -428,6 +430,9 @@
     <Reference Include="Yarn.Microsoft.Win32.SystemEvents">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.Microsoft.Win32.SystemEvents.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Yarn.System.Drawing.Common">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Drawing.Common.dll</HintPath>
     </Reference>
@@ -448,9 +453,6 @@
     </Reference>
     <Reference Include="Yarn.System.Text.Json">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Text.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Yarn.System.CommandLine">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.CommandLine.dll</HintPath>
