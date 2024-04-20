@@ -17,19 +17,30 @@ public class RoachHandler : MonoBehaviour
     private int roachKilled = 0;
 
     public Sprite deadRoach;
+
+    public HeelieChangeScene heelieChangeScene;
+
+    public LayerMask clickableLayer;
+
     private void Awake()
     {
         mainCamera = Camera.main;
+    }
+
+    private void Update()
+    {
+        Debug.Log(roachKilled);
     }
 
     private void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
 
-        var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        var ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit2D rayHit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, clickableLayer);
         if (!rayHit.collider) return;
 
-        Debug.Log("roach!");
+        Debug.Log("Clicked on object: " + rayHit.collider.gameObject.name + " with tag: " + rayHit.collider.gameObject.tag);
         itemClicked = rayHit.collider.gameObject;
         CheckClicked();
     }
@@ -63,21 +74,28 @@ public class RoachHandler : MonoBehaviour
 
     private void StopRoach()
     {
-        if ( roach != null)
+        if (roach != null)
         {
             Animator animator = roach.GetComponent<Animator>();
             if (animator != null)
             {
                 animator.enabled = false;
             }
+
+            // Deactivate the collider component
+            BoxCollider2D collider = roach.GetComponent<BoxCollider2D>();
+            if (collider != null)
+            {
+                collider.enabled = false;
+            }
         }
-    } 
+    }
 
     private void CheckHeelies()
     {
         if (roachKilled == 4)
         {
-            heelies.SetActive(true);
+            heelieChangeScene.AllRoachesKilled();
         }
     }
 }

@@ -23,6 +23,9 @@ public class HeelieChangeScene : MonoBehaviour
 
     private bool fell = false;
 
+    public bool heeliesClicked = false;
+    bool roachesKilled = false;
+
     private void OnEnable()
     {
         Debug.Log("Heelies are now available");
@@ -30,6 +33,16 @@ public class HeelieChangeScene : MonoBehaviour
     private void Update()
     {
         mainCamera = Camera.main;
+        Debug.Log(heelies.activeSelf);
+
+        if (roachesKilled)
+        {
+            heelies.SetActive(true);
+            return;
+        }
+
+        if (heeliesClicked)
+            heelies.SetActive(false);
     }
 
     public void OnClick(InputAction.CallbackContext context)
@@ -45,15 +58,23 @@ public class HeelieChangeScene : MonoBehaviour
 
     private void CheckClicked()
     {
+        Debug.Log("Item clicked: " + itemClicked.name); // Log the name of the clicked item
+
         if (itemClicked.CompareTag("heelies"))
         {
-            Debug.Log("Heelies clicked from heelies");
-            Fall();
+            Debug.Log("Heelies clicked. Current active state: " + heelies.activeSelf);
             roaches.SetActive(true);
             heelies.SetActive(false);
+            heeliesClicked = true;
+            Debug.Log("Heelies new active state: " + heelies.activeSelf);
+            Fall();
         }
-        else return;
+        else
+        {
+            Debug.Log("Clicked item is not heelies. It is: " + itemClicked.tag);
+        }
     }
+
 
     private void Fall()
     {
@@ -74,5 +95,10 @@ public class HeelieChangeScene : MonoBehaviour
     private void CameraPan()
     {
         cameraPan.SetBool("Panning", true);
+    }
+
+    public void AllRoachesKilled()
+    {
+        roachesKilled = true;
     }
 }
