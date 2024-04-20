@@ -1072,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Package Pick Up
       objectReference: {fileID: 0}
+    - target: {fileID: 3049154763606217402, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3187258247687200309, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_Size.x
       value: 0.64
@@ -1218,6 +1222,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.779095, y: 0.78645134}
   m_EdgeRadius: 0
+--- !u!1 &445901503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3049154763606217402, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+  m_PrefabInstance: {fileID: 459163097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &459163097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1285,6 +1294,10 @@ PrefabInstance:
     - target: {fileID: 3049154763606217402, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_Name
       value: Locker Interaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049154763606217402, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3187258247687200309, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_Size.x
@@ -2198,7 +2211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295407709323329654, guid: e5d54accb8f9246c98a784770d10dda2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.31
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 2882470592882225851, guid: e5d54accb8f9246c98a784770d10dda2, type: 3}
       propertyPath: m_ChildAlignment
@@ -3591,6 +3604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616145109}
   - component: {fileID: 1616145110}
+  - component: {fileID: 1616145111}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -3629,6 +3643,19 @@ MonoBehaviour:
   conversationStartNode: Raccoon_1
   dialogueRunner: {fileID: 857230386}
   deactivate: {fileID: 470476985}
+--- !u!114 &1616145111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616145108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1821202127}
 --- !u!1 &1620848357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,6 +3968,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1466915988}
   m_SourcePrefab: {fileID: 100100000, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
+--- !u!1 &1821202127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3049154763606217402, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+  m_PrefabInstance: {fileID: 384852229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1821202128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8794250840431098398, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
@@ -4377,6 +4409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108600696}
   - component: {fileID: 2108600697}
+  - component: {fileID: 2108600698}
   m_Layer: 0
   m_Name: Dialogue2
   m_TagString: Untagged
@@ -4415,6 +4448,19 @@ MonoBehaviour:
   conversationStartNode: Raccoon_2
   dialogueRunner: {fileID: 857230386}
   deactivate: {fileID: 354875955}
+--- !u!114 &2108600698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108600695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 445901503}
 --- !u!4 &2134609580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9133904696296678223, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}

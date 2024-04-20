@@ -52,7 +52,7 @@ public class YarnInteractable : SceneAction
         if (isCurrentConversation)
         {
             isCurrentConversation = false;
-            Debug.Log($"Started conversation with {name}.");
+            deactivate.SetActive(false);
         }
     }
 
@@ -60,10 +60,5 @@ public class YarnInteractable : SceneAction
     public void DisableConversation()
     {
         interactable = false;
-        if (deactivate != null)
-        {
-            deactivate.SetActive(false);
-        }
-        else return;
     }
 }

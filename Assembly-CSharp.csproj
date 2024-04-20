@@ -137,6 +137,7 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Teleporter.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionDialogueTravel.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />
+    <Compile Include="Assets/Scripts/Activate.cs" />
     <Compile Include="Assets/Settings/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
