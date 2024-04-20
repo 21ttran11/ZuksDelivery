@@ -14,6 +14,10 @@ public class YarnInteractable : SceneAction
 
     [SerializeField]
     public DialogueRunner dialogueRunner;
+
+    [SerializeField]
+    private GameObject deactivate;
+
     private bool interactable = true;
     private bool isCurrentConversation = false;
     private float defaultIndicatorIntensity;
@@ -56,5 +60,10 @@ public class YarnInteractable : SceneAction
     public void DisableConversation()
     {
         interactable = false;
+        if (deactivate != null)
+        {
+            deactivate.SetActive(false);
+        }
+        else return;
     }
 }
