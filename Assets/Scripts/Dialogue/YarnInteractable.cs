@@ -12,15 +12,14 @@ public class YarnInteractable : SceneAction
         Debug.Log("Dialogue is triggered");
     }
 
-    // internal properties not exposed to editor
-    private DialogueRunner dialogueRunner;
+    [SerializeField]
+    public DialogueRunner dialogueRunner;
     private bool interactable = true;
     private bool isCurrentConversation = false;
     private float defaultIndicatorIntensity;
 
     public void Start()
     {
-        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
     }
 
