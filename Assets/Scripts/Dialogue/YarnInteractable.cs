@@ -17,6 +17,7 @@ public class YarnInteractable : SceneAction
     private bool interactable = true;
     private bool isCurrentConversation = false;
     private float defaultIndicatorIntensity;
+    private bool played = false;
 
     public void Start()
     {
@@ -25,12 +26,13 @@ public class YarnInteractable : SceneAction
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && played == false)
         {
             if (interactable && !dialogueRunner.IsDialogueRunning)
             {
                 StartConversation();
             }
+            played = true;
         }
     }
 
