@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ActionDialogue : SceneAction
 {
-    private Transform dialogue;
+    [SerializeField]
+    private GameObject dialogue;
     public override void Interact()
     {
-        dialogue = this.gameObject.transform.GetChild(0);
+        dialogue.SetActive(true);
     }
 }

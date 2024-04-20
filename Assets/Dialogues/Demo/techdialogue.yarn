@@ -10,7 +10,6 @@ Computer: What's your name?
     -> My name is Zucchini.
         <<set $characterName to "Zucchini">>
 Computer: Ah, nice to meet you, {$characterName}!
-<<jump Continuation>>
 ===
 
 title: Continuation
