@@ -53,8 +53,8 @@
     <UnityVersion>2022.3.9f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Applications/Visual Studio.app/Contents/MonoBundle/Addins/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="/Users/michaelrivera/Documents/GitHub/ZuksDelivery/Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/SourceGenerator/YarnSpinner.Unity.SourceCodeGenerator.dll" />
+    <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/tiffanytran/Documents/GitHub/ZuksDelivery/Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/SourceGenerator/YarnSpinner.Unity.SourceCodeGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -99,8 +99,8 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
-    <Compile Include="Assets/Scripts/Triggers/Interactions/ActionSceneChange.cs" />
     <Compile Include="Assets/Scripts/Core/SoundManager.cs" />
+    <Compile Include="Assets/Scripts/Triggers/Interactions/ActionSceneChange.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/LapTrigger.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionTrigger.cs" />
@@ -428,9 +428,6 @@
     <Reference Include="Yarn.Microsoft.Win32.SystemEvents">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.Microsoft.Win32.SystemEvents.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-    </Reference>
     <Reference Include="Yarn.System.Drawing.Common">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Drawing.Common.dll</HintPath>
     </Reference>
@@ -452,23 +449,11 @@
     <Reference Include="Yarn.System.Text.Json">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.Text.Json.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Yarn.System.CommandLine">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@6b09d3a4c4/Runtime/DLLs/Yarn.System.CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.GradleProject">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AndroidPlayer/Unity.Android.GradleProject.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
