@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PostOffice2.unity
     guid: b151a6946fd4adf46bc6fc5a3847b7d4
+  - enabled: 1
+    path: Assets/Scenes/MEAT.unity
+    guid: 9df7b130dbfc54fcbae4408be5c1cfb9
   m_configObjects: {}

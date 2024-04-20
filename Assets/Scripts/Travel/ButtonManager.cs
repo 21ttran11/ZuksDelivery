@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TarodevController;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -23,9 +24,16 @@ public class ButtonManager : MonoBehaviour
     public float zoomDuration = 2f;
     public float originalSize = 20f;
 
+    public GameObject[] buttonUI;
+
+    public static bool canTravel = false;
+
+    public string travelSceneStringName = "";
+
     private void Awake()
     {
         originalSpeed = playerMovement.maxSpeed;
+        SetButtonUIVisibility(false);
     }
 
     IEnumerator PlaySequence()
@@ -71,27 +79,33 @@ public class ButtonManager : MonoBehaviour
             
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (canTravel && Input.GetKey(KeyCode.LeftShift))
         {
-            if (!isSequencePlaying && !isPlayerTurn && !isSequenceCompleted)
-                StartCoroutine(PlaySequence());
-        }
-        else
-        {
-            if ((isPlayerTurn || isSequencePlaying) && !isSequenceCompleted)
+            if (Input.GetKey(KeyCode.D))
             {
-                Debug.Log("D key released. Ending the current sequence.");
-                StopAllCoroutines();
-                StopAllBlinking();
-                StartZoomOut();
-                ResetAllButtons();
-                isPlayerTurn = false;
-                isSequencePlaying = false;
-                UpdateSpeed(originalSpeed);
-                sequenceIndex = 0;
+                SetButtonUIVisibility(true);
+                if (!isSequencePlaying && !isPlayerTurn && !isSequenceCompleted)
+                    StartCoroutine(PlaySequence());
             }
-            return;
+            else
+            {
+                if ((isPlayerTurn || isSequencePlaying) && !isSequenceCompleted)
+                {
+                    Debug.Log("D key released. Ending the current sequence.");
+                    StopAllCoroutines();
+                    StopAllBlinking();
+                    StartZoomOut();
+                    ResetAllButtons();
+                    isPlayerTurn = false;
+                    isSequencePlaying = false;
+                    UpdateSpeed(originalSpeed);
+                    sequenceIndex = 0;
+                    SetButtonUIVisibility(false);
+                }
+                return;
+            }
         }
+       
 
         if (isSequencePlaying)
         {
@@ -121,6 +135,8 @@ public class ButtonManager : MonoBehaviour
                             UpdateSpeed(originalSpeed);
                             ResetAllButtons();
                             StartZoomOut();
+                            SetButtonUIVisibility(false);
+                            StartCoroutine(ChangeSceneWithAnimation(travelSceneStringName));
                         }
                     }
                     else
@@ -135,6 +151,17 @@ public class ButtonManager : MonoBehaviour
             }
         }
     }
+
+    private void SetButtonUIVisibility(bool isVisible)
+{
+    foreach (var uiElement in buttonUI)
+    {
+        if (uiElement != null)
+        {
+            uiElement.SetActive(isVisible);
+        }
+    }
+}
 
     private void StopAllBlinking()
     {
@@ -205,4 +232,14 @@ public class ButtonManager : MonoBehaviour
     {
         StartCoroutine(ZoomCameraOut());
     }
+
+    IEnumerator ChangeSceneWithAnimation(string sceneName)
+    {
+        // Start the teleportation or transition animation here
+
+        yield return new WaitForSeconds(2.0f);
+
+        SceneManager.LoadScene(sceneName);
+    }
+
 }

@@ -1468,10 +1468,6 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2680107371787789510, guid: 87f42e150508d4810ae5fc11e68a3fb7, type: 3}
-      propertyPath: travelSceneStringName
-      value: MEAT
-      objectReference: {fileID: 0}
-    - target: {fileID: 2680107371787789510, guid: 87f42e150508d4810ae5fc11e68a3fb7, type: 3}
       propertyPath: buttonUI.Array.data[0]
       value: 
       objectReference: {fileID: 265380246}
