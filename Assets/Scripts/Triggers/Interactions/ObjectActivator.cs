@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -7,6 +6,7 @@ public class ObjectActivator : MonoBehaviour
 {
     private Vector3 originalScale;
     private GameObject childObject;
+    private bool isDeactivating = false;
 
     private void Start()
     {
@@ -17,21 +17,39 @@ public class ObjectActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        childObject.SetActive(true);
-        childObject.transform.DOScale(originalScale, 0.5f).SetEase(Ease.OutBack);
+        if (!isDeactivating)
+        {
+            childObject.SetActive(true);
+            childObject.transform.DOScale(originalScale, 0.5f).SetEase(Ease.OutBack);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        StartCoroutine(DeactivateAfterAnimation());
+        if (!isDeactivating && childObject.activeSelf)
+        {
+            StartCoroutine(DeactivateAfterAnimation());
+        }
     }
 
     private IEnumerator DeactivateAfterAnimation()
     {
+        isDeactivating = true;
+
         childObject.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack);
+        Debug.Log("Object Activator: Starting scale down animation.");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.6f);
 
-        childObject.SetActive(false);
+        if (childObject.activeSelf)
+        {
+            childObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("child object was already inactive when trying to deactivate.");
+        }
+
+        isDeactivating = false;
     }
 }

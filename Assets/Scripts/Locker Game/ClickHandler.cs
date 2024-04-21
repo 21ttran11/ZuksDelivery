@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +11,8 @@ public class ClickHandler : MonoBehaviour
     private GameObject dialogue;
 
     private Camera mainCamera;
+    private bool isDialogueActive = false;
+    private Coroutine currentDialogueCoroutine;
 
     private void Awake()
     {
@@ -34,10 +35,15 @@ public class ClickHandler : MonoBehaviour
     {
         for (int i = 0; i < lockersArray.Length; i++)
         {
-            if(itemClicked == lockersArray[i])
+            if (itemClicked == lockersArray[i])
             {
                 Debug.Log("Locker matched: " + lockersArray[i].name);
                 dialogue = dialogueArray[i];
+                if (isDialogueActive && currentDialogueCoroutine != null)
+                {
+                    StopCoroutine(currentDialogueCoroutine);
+                    SetAllDialoguesInactive();
+                }
                 DeactivateLocker();
                 break;
             }
@@ -48,23 +54,24 @@ public class ClickHandler : MonoBehaviour
     {
         itemClicked.SetActive(false);
         Debug.Log("Opening Locker");
-        StartDelay();
+        currentDialogueCoroutine = StartCoroutine(DelayShowDialogue(dialogue));
     }
 
-    private void StartDelay()
+    private void SetAllDialoguesInactive()
     {
-        StartCoroutine(Delay());
+        foreach (var dlg in dialogueArray)
+        {
+            dlg.SetActive(false);
+        }
     }
 
-    IEnumerator Delay()
+    IEnumerator DelayShowDialogue(GameObject dialogueToShow)
     {
-        yield return new WaitForSeconds(.5f);
-        ActivateDialogue();
+        isDialogueActive = true;
+        dialogueToShow.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        dialogueToShow.SetActive(false);
+        isDialogueActive = false;
     }
 
-    private void ActivateDialogue()
-    {
-        if (dialogue == null) return;
-        dialogue.SetActive(true);
-    }
 }

@@ -55,6 +55,9 @@ public class Move : MonoBehaviour
 
     private void FlipCharacter()
     {
+        if (maxSpeed <= 0)
+            return;
+
         Vector3 flippedScale = transform.localScale;
         flippedScale.x *= -1f;
         transform.localScale = flippedScale;

@@ -23,14 +23,19 @@ public class YarnInteractable : SceneAction
     private float defaultIndicatorIntensity;
     private bool played = false;
 
+    private Move playerMovement;
+    private float orgSpeed = 0f;
+
     public void Start()
     {
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
+        playerMovement = FindObjectOfType<Move>();
+        orgSpeed = playerMovement.maxSpeed;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && played == false)
+        if (played == false)
         {
             if (interactable && !dialogueRunner.IsDialogueRunning)
             {
@@ -45,6 +50,7 @@ public class YarnInteractable : SceneAction
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
         dialogueRunner.StartDialogue(conversationStartNode);
+        playerMovement.maxSpeed = 0;
     }
 
     private void EndConversation()
@@ -54,6 +60,8 @@ public class YarnInteractable : SceneAction
             isCurrentConversation = false;
             deactivate.SetActive(false);
         }
+
+        playerMovement.maxSpeed = orgSpeed;
     }
 
     //    [YarnCommand("disable")]
