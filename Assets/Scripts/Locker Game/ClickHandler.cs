@@ -7,6 +7,8 @@ public class ClickHandler : MonoBehaviour
     [SerializeField]
     public GameObject[] lockersArray;
     public GameObject[] dialogueArray;
+    public GameObject[] stealableItemsArray;
+
     private GameObject itemClicked;
     private GameObject dialogue;
 

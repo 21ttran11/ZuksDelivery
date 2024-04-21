@@ -7,6 +7,7 @@ TagManager:
   - Activator
   - roach
   - heelies
+  - steal
   layers:
   - Default
   - TransparentFX
