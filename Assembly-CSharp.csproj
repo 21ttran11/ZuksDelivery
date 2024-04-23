@@ -131,6 +131,7 @@
     <Compile Include="Assets/Scripts/UI/InvisibleCursor.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+    <Compile Include="Assets/RaccoonAnimation.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/Locker Game/HeelieDialogue.cs" />
