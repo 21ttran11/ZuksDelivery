@@ -75,4 +75,22 @@ Dr: Yes, I am. And why are you asking?
 Dr: Ah yes, very well. I will take it.
 -> Here you go!
 Dr: Perfect, thank you kind carnivore!
+Dr: You should hurry on back now, the sun is heading down.
+===
+
+title: Done
+---
+Zuk: Looks like I'm done here.
+Zuk: Let's start walking back.
+===
+
+title: Vegan
+---
+-> Hey! Did you do that?
+Vegan: Hell yeah! You like it?
+-> What? No! That's so disrespectful...
+Vegan: ...
+-> Carnivores would NEVER be so rude.
+Vegan: What the hell did you say to me?
+-> Crap! I gotta run, these heelies better still work!
 ===
