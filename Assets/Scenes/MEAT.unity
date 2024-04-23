@@ -7049,8 +7049,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.022400022, y: 0.13035, z: 0}
-    m_Extent: {x: 2.5681, y: 1.40845, z: 0}
+    m_Center: {x: 0.008949995, y: 0.13134998, z: 0}
+    m_Extent: {x: 2.56635, y: 1.41395, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10851,7 +10851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   conversationStartNode: Homecooked1
-  move: 1
+  move: 0
   dialogueRunner: {fileID: 319742286}
   deactivate: {fileID: 59418394}
   deactivateDialogue: {fileID: 1924813676}
