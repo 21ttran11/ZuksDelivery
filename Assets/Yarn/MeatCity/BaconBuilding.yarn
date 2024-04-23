@@ -1,7 +1,7 @@
 ﻿title: BaconBuilding
 tags:
 ---
-zuk: This is a bacon building
+zuk: This is a bacon building.
 ===
 
 title: NikuNiku
@@ -11,7 +11,7 @@ zuk: Niku Niku !? I'm a huge fan !
 
 title: Graffiti
 ---
-zuk: What?! This is AWFUL
+zuk: What?! This is AWFUL.
 ===
 
 title: Homecooked1
@@ -29,4 +29,50 @@ guy: Yo! You made it!
 guy: Could you please grab my cat?
 guy: He's over there to the right!
 -> Seriously? Fine...
+===
+
+title: Cat
+---
+-> Here kitty kitty
+Cat: What the fuck, that's not gonna lure me
+-> Holy shit, you can talk?
+Cat: Uh yeah... You haven't ever been to my homeland?
+-> Where are you from?
+Cat: The cat realm... duh
+Cat: Anyway, you've totally disrupted my peace.
+Cat: I'm gonna go see my homies. Peace out!
+===
+
+title: Homecooked3
+---
+guy: Did you find my cat?
+-> Uh yeah but he kind of disappeared?
+    guy: What are you talking about?
+    <<jump Angry>> 
+-> Nope! You lied, he was not there.
+    guy: He must've gotten lost...
+    <<jump Sad>>
+===
+
+title: Angry
+---
+guy: You stole my cat didn't you!
+-> No! I need to go now-
+===
+
+title: Sad
+---
+guy: He HAS been off lately...
+guy: I must've done something to upset him.
+-> Yeah, probably- Anyways, see ya!
+===
+
+title: Delivery
+---
+-> Are you Dr Sir Loin?
+Dr: Yes, I am. And why are you asking?
+-> I have a package for you!
+Dr: Ah yes, very well. I will take it.
+-> Here you go!
+Dr: Perfect, thank you kind carnivore!
 ===

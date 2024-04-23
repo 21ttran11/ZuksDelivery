@@ -22,6 +22,8 @@ public class YarnInteractable : SceneAction
 
     [SerializeField]
     private GameObject deactivate;
+    [SerializeField]
+    private GameObject deactivateDialogue;
 
     private bool interactable = true;
     private bool isCurrentConversation = false;
@@ -70,7 +72,9 @@ public class YarnInteractable : SceneAction
             if (deactivate != null)
             {
                 deactivate.SetActive(false);
+                deactivateDialogue.SetActive(false);
             }
+            else return;
         }
 
         playerMovement.maxSpeed = orgSpeed;
