@@ -8,6 +8,10 @@ public class YarnInteractable : SceneAction
 {
     [SerializeField] private string conversationStartNode;
     private bool dialogue;
+
+    [SerializeField]
+    private bool move;
+
     public override void Interact()
     {
         Debug.Log("Dialogue is triggered");
@@ -42,7 +46,6 @@ public class YarnInteractable : SceneAction
             {
                 StartConversation();
             }
-            played = true;
         }
     }
 
@@ -51,7 +54,12 @@ public class YarnInteractable : SceneAction
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
         dialogueRunner.StartDialogue(conversationStartNode);
-        playerMovement.maxSpeed = 0;
+
+        if (move == false)
+        {
+            playerMovement.maxSpeed = 0;
+        }
+
     }
 
     private void EndConversation()
@@ -59,7 +67,10 @@ public class YarnInteractable : SceneAction
         if (isCurrentConversation)
         {
             isCurrentConversation = false;
-            deactivate.SetActive(false);
+            if (deactivate != null)
+            {
+                deactivate.SetActive(false);
+            }
         }
 
         playerMovement.maxSpeed = orgSpeed;
