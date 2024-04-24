@@ -85,4 +85,5 @@ public class YarnInteractable : SceneAction
     {
         interactable = false;
     }
+
 }
