@@ -12,6 +12,9 @@ public class YarnInteractable : SceneAction
     [SerializeField]
     private bool move;
 
+    [SerializeField]
+    private GameObject activate;
+
     public override void Interact()
     {
         Debug.Log("Dialogue is triggered");
@@ -73,6 +76,11 @@ public class YarnInteractable : SceneAction
             {
                 deactivate.SetActive(false);
                 deactivateDialogue.SetActive(false);
+            }
+
+            if (activate != null)
+            {
+                activate.SetActive(true);
             }
             else return;
         }
