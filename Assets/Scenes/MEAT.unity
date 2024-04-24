@@ -171,6 +171,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Homecooked3
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 319742286}
   deactivate: {fileID: 1081302969}
   deactivateDialogue: {fileID: 12355627}
@@ -1825,6 +1826,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Graffiti
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 1636935449}
   deactivate: {fileID: 312472226}
   deactivateDialogue: {fileID: 312472226}
@@ -2825,7 +2827,7 @@ Transform:
   m_GameObject: {fileID: 456413800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.888383, y: -1.29, z: -0.022369446}
+  m_LocalPosition: {x: 7.889368, y: -1.29, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3484,6 +3486,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: BaconBuilding
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 1636935449}
   deactivate: {fileID: 557859861}
   deactivateDialogue: {fileID: 557859861}
@@ -3991,6 +3994,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Delivery
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 817196990}
   deactivate: {fileID: 948663171}
   deactivateDialogue: {fileID: 734577737}
@@ -4592,7 +4596,7 @@ Transform:
   m_GameObject: {fileID: 819665003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3311825, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 5.333153, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6271,6 +6275,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Homecooked2
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 319742286}
   deactivate: {fileID: 1092266370}
   deactivateDialogue: {fileID: 1092266370}
@@ -6614,7 +6619,6 @@ GameObject:
   - component: {fileID: 1218751489}
   - component: {fileID: 1218751490}
   - component: {fileID: 1218751491}
-  - component: {fileID: 1218751492}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -6652,6 +6656,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Cat
   move: 1
+  activate: {fileID: 1081302969}
   dialogueRunner: {fileID: 980597669}
   deactivate: {fileID: 1354316282}
   deactivateDialogue: {fileID: 1218751488}
@@ -6668,19 +6673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1006783246}
---- !u!114 &1218751492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218751488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1081302969}
 --- !u!1 &1224057044
 GameObject:
   m_ObjectHideFlags: 0
@@ -7092,8 +7084,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.018249989, y: 0.12019998, z: 0}
-    m_Extent: {x: 2.56685, y: 1.4089, z: 0}
+    m_Center: {x: 0.020099998, y: 0.12114996, z: 0}
+    m_Extent: {x: 2.5689998, y: 1.4152501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7481,6 +7473,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: NikuNiku
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 1636935449}
   deactivate: {fileID: 1338886245}
   deactivateDialogue: {fileID: 1338886245}
@@ -8056,6 +8049,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Vegan
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 765079582}
   deactivate: {fileID: 542120030}
   deactivateDialogue: {fileID: 1389256507}
@@ -8599,7 +8593,7 @@ Transform:
   m_GameObject: {fileID: 1569196297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.829066, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 6.834977, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8745,6 +8739,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Done
   move: 1
+  activate: {fileID: 0}
   dialogueRunner: {fileID: 1636935449}
   deactivate: {fileID: 1595065663}
   deactivateDialogue: {fileID: 1595065663}
@@ -8775,7 +8770,7 @@ Transform:
   m_GameObject: {fileID: 1595696947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.56249, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 8.572342, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9239,7 +9234,7 @@ Transform:
   m_GameObject: {fileID: 1687597281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9623637, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 5.9663043, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9355,11 +9350,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324958471037431944, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 324958471037431944, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.33
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 324958471037431944, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -9548,11 +9543,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4571891
+      value: -1.4374852
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.607857
+      value: 10.607847
       objectReference: {fileID: 0}
     - target: {fileID: 9133904696296678223, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9831,7 +9826,7 @@ Transform:
   m_GameObject: {fileID: 1780787199}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.695777, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 7.7036586, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10693,7 +10688,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1924813677}
   - component: {fileID: 1924813678}
-  - component: {fileID: 1924813679}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -10731,22 +10725,10 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Homecooked1
   move: 0
+  activate: {fileID: 1006783246}
   dialogueRunner: {fileID: 319742286}
   deactivate: {fileID: 59418394}
   deactivateDialogue: {fileID: 1924813676}
---- !u!114 &1924813679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924813676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1006783246}
 --- !u!1 &1957193321
 GameObject:
   m_ObjectHideFlags: 0
@@ -10774,7 +10756,7 @@ Transform:
   m_GameObject: {fileID: 1957193321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8508215, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 7.8518066, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11519,7 +11501,7 @@ MonoBehaviour:
   - {fileID: 5291422722554118347}
   - {fileID: 6681787042058098379}
   - {fileID: 2344761497920008169}
-  travelSceneStringName: Room
+  travelSceneStringName: RoomAfterMeatCity
 --- !u!114 &2758340078635394900
 MonoBehaviour:
   m_ObjectHideFlags: 0
