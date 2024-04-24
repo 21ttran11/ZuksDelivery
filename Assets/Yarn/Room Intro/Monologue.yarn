@@ -1,0 +1,35 @@
+﻿title: Monologue
+tags:
+---
+Zuk: The name’s Zuk, short for Zucchini.
+Zuk: Yeah, like the veggie...
+Zuk: And Like everyone, I too search for a purpose
+Zuk: …my own purpose.
+Zuk: But, we gotta make bank too.
+Zuk: That’s why, I just landed a part-time job as a delivery driver!
+===
+
+title: Mom
+---
+Mom: Zuk can barely survive a crosswalk...
+Mom: I don’t know how he thinks he can pull this off-
+===
+
+title: MomResponse
+---
+Zuk: Moomm, Ahem...
+===
+
+title: MonologueCont.1
+---
+Zuk: But alas…this is now my purpose.
+Zuk: Kind of lame, but it’s just me, and my fellow carnivores against the true enemy…
+Zuk: The Vegans!
+===
+
+title: MonologueEnd
+---
+Zuk: So, be afraid.
+Zuk: Be very afraid.
+<<wait 2>>
+===
