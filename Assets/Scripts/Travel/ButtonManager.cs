@@ -28,6 +28,8 @@ public class ButtonManager : MonoBehaviour
 
     public static bool canTravel = false;
 
+    public Animator animator;
+    public string animationStringName;
     public string travelSceneStringName = "";
 
     private void Awake()
@@ -242,8 +244,10 @@ public class ButtonManager : MonoBehaviour
     IEnumerator ChangeSceneWithAnimation(string sceneName)
     {
         // Start the teleportation or transition animation here
+        if (animator != null)
+            animator.Play(animationStringName);
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
 
         SceneManager.LoadScene(sceneName);
     }

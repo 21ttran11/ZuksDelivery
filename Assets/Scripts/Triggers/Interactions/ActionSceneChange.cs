@@ -10,6 +10,9 @@ public class ActionSceneChange : SceneAction
     [SerializeField]
     private float delayInSeconds = 0.5f;
 
+    public Animator animator;
+    public string animationStringName;
+
     public override void Interact()
     {
         StartCoroutine(DelayedSceneLoad(sceneName, delayInSeconds));
@@ -17,6 +20,9 @@ public class ActionSceneChange : SceneAction
 
     private IEnumerator DelayedSceneLoad(string sceneName, float delay)
     {
+        if (animator != null)
+            animator.Play(animationStringName);
+
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
     }

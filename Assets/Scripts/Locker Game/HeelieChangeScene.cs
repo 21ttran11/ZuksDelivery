@@ -26,6 +26,10 @@ public class HeelieChangeScene : MonoBehaviour
     public bool heeliesClicked = false;
     bool roachesKilled = false;
 
+    public Animator animator;
+    public string animationStringName;
+    public float delayInSeconds = 1f;
+
     private void OnEnable()
     {
         Debug.Log("Heelies are now available");
@@ -88,7 +92,7 @@ public class HeelieChangeScene : MonoBehaviour
 
         else if (fell == true) 
         {
-            SceneManager.LoadScene("PostOffice2");
+            StartCoroutine(DelayedSceneLoad("PostOffice2", delayInSeconds));
         }
     }
 
@@ -100,5 +104,14 @@ public class HeelieChangeScene : MonoBehaviour
     public void AllRoachesKilled()
     {
         roachesKilled = true;
+    }
+
+    private IEnumerator DelayedSceneLoad(string sceneName, float delay)
+    {
+        if (animator != null)
+            animator.Play(animationStringName);
+
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }
