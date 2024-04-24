@@ -58,8 +58,12 @@ public class Move : MonoBehaviour
         if (maxSpeed <= 0)
             return;
 
+        // Flip the character by scaling
         Vector3 flippedScale = transform.localScale;
-        flippedScale.x *= -1f;
+        flippedScale.x = -flippedScale.x;
         transform.localScale = flippedScale;
     }
+
+
+
 }

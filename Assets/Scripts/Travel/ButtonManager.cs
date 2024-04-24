@@ -34,6 +34,12 @@ public class ButtonManager : MonoBehaviour
     {
         originalSpeed = playerMovement.maxSpeed;
         SetButtonUIVisibility(false);
+        
+    }
+
+    private void Start()
+    {
+        canTravel = false;
     }
 
     IEnumerator PlaySequence()
@@ -81,7 +87,7 @@ public class ButtonManager : MonoBehaviour
 
         if (canTravel && Input.GetKey(KeyCode.LeftShift))
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
             {
                 SetButtonUIVisibility(true);
                 if (!isSequencePlaying && !isPlayerTurn && !isSequenceCompleted)
