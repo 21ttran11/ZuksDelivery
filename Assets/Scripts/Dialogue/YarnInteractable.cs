@@ -40,7 +40,9 @@ public class YarnInteractable : SceneAction
     {
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
         playerMovement = FindObjectOfType<Move>();
-        orgSpeed = playerMovement.maxSpeed;
+
+        if(playerMovement != null)
+            orgSpeed = playerMovement.maxSpeed;
     }
 
     public void Update()
@@ -85,7 +87,8 @@ public class YarnInteractable : SceneAction
             else return;
         }
 
-        playerMovement.maxSpeed = orgSpeed;
+        if(playerMovement != null)
+            playerMovement.maxSpeed = orgSpeed;
     }
 
     //    [YarnCommand("disable")]
