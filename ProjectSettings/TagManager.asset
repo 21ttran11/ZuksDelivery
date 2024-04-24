@@ -8,6 +8,7 @@ TagManager:
   - roach
   - heelies
   - steal
+  - email
   layers:
   - Default
   - TransparentFX
