@@ -15,6 +15,7 @@ public class ChangeScene : MonoBehaviour
     public void LoadSceneWithDelay()
     {
         Debug.Log("button clicekd");
+        AudioManager.PlaySFX("s_click0" + Random.Range(0, 2), 1.0f);
         StartCoroutine(LoadSceneAfterAnimation());
     }
 
@@ -32,4 +33,5 @@ public class ChangeScene : MonoBehaviour
 
         SceneManager.LoadScene(sceneName);
     }
+
 }
