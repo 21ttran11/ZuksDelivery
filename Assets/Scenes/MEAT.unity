@@ -632,8 +632,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98850134}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.162885, y: -1.7486007, z: 9.601868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.374712, y: -1.7486007, z: 9.601868}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -647,7 +647,7 @@ Transform:
   - {fileID: 542120031}
   - {fileID: 948663174}
   - {fileID: 1367613663}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1957193322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109603729
 GameObject:
@@ -4057,7 +4057,6 @@ GameObject:
   m_Component:
   - component: {fileID: 734577738}
   - component: {fileID: 734577739}
-  - component: {fileID: 734577740}
   - component: {fileID: 734577741}
   m_Layer: 0
   m_Name: Dialogue
@@ -4100,19 +4099,6 @@ MonoBehaviour:
   dialogueRunner: {fileID: 817196990}
   deactivate: {fileID: 948663171}
   deactivateDialogue: {fileID: 734577737}
---- !u!114 &734577740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734577737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 542120030}
 --- !u!114 &734577741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7186,8 +7172,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.019899964, y: 0.13, z: 0}
-    m_Extent: {x: 2.5675, y: 1.4148, z: 0}
+    m_Center: {x: 0.017349958, y: 0.13440001, z: 0}
+    m_Extent: {x: 2.57095, y: 1.4103, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7718,6 +7704,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 30d976aec5e8c475ba1a797f19d18382, type: 3}
     - target: {fileID: 3187258247687200309, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187258247687200309, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187258247687200309, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187258247687200309, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
@@ -7731,11 +7729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8794250840431098398, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.78
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 8794250840431098398, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.24
+      value: 9.58
       objectReference: {fileID: 0}
     - target: {fileID: 8794250840431098398, guid: 91f049e160c21724d832eb4eece5474f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8778,6 +8776,7 @@ GameObject:
   - component: {fileID: 1595065667}
   - component: {fileID: 1595065666}
   - component: {fileID: 1595065665}
+  - component: {fileID: 1595065668}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -8845,6 +8844,19 @@ MonoBehaviour:
   dialogueRunner: {fileID: 1636935449}
   deactivate: {fileID: 1595065663}
   deactivateDialogue: {fileID: 1595065663}
+--- !u!114 &1595065668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595065663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 542120030}
 --- !u!1 &1595696947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10990,6 +11002,7 @@ Transform:
   - {fileID: 1882466803}
   - {fileID: 1481672897}
   - {fileID: 1350291618}
+  - {fileID: 98850135}
   m_Father: {fileID: 1306121718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1957193323
@@ -12342,7 +12355,6 @@ SceneRoots:
   - {fileID: 238105825}
   - {fileID: 1398975946}
   - {fileID: 125172781}
-  - {fileID: 98850135}
   - {fileID: 382634873}
   - {fileID: 980597668}
   - {fileID: 765079581}

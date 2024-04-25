@@ -19,12 +19,17 @@ public class Move : MonoBehaviour
     private float acceleration;
     private bool onGround;
     private Animator animator;
+    private float orgSpeed;
+
+    public float sprintSpeed = 6f;
+    public bool canSprint = false;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        orgSpeed = maxSpeed;
     }
 
     // Update is called once per frame
@@ -36,6 +41,15 @@ public class Move : MonoBehaviour
         if (direction.x != 0f && Mathf.Sign(transform.localScale.x) != Mathf.Sign(direction.x))
         {
             FlipCharacter();
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && canSprint)
+        {
+            maxSpeed = sprintSpeed;
+        }
+        else
+        {
+            maxSpeed = orgSpeed;
         }
     }
 
