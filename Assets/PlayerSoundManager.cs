@@ -11,7 +11,11 @@ public class PlayerSoundManager : MonoBehaviour
     private void Start()
     {
         if (AudioManager.instance != null)
+        {
+            AudioManager.StopMusic();
             AudioManager.PlaySFX(sfxString, 1.0f);
+        }
+            
         StartCoroutine(PlayMusicWithDelay(delayMusic));
     }
 
