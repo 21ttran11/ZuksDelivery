@@ -314,3 +314,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6820c81e913bb494aa7ac5e01d2fec05, type: 3}
   - key: s_click01
     clip: {fileID: 8300000, guid: ddb5b213a59c146f09cb2a26eb2f8210, type: 3}
+  - key: s_enter
+    clip: {fileID: 8300000, guid: 22a08a2f56fa342fcb6f23129a427d7a, type: 3}
+  - key: s_exit
+    clip: {fileID: 8300000, guid: 40a2fb9cc4ac940c1a384df4e6b4336a, type: 3}
+  - key: s_interact
+    clip: {fileID: 8300000, guid: c4797d6767ba146439d5c91e36357ffa, type: 3}
+  - key: s_walking
+    clip: {fileID: 8300000, guid: 895c4a6a608ad4128b0c17b346ff4603, type: 3}
+  - key: s_walking_meat
+    clip: {fileID: 8300000, guid: 91ba0eb586bd74d12b1bafd70bd614f4, type: 3}

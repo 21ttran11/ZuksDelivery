@@ -23,6 +23,9 @@ public class ActionSceneChange : SceneAction
         if (animator != null)
             animator.Play(animationStringName);
 
+        if (AudioManager.instance != null)
+            AudioManager.PlaySFX("s_exit", 1.0f);
+
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
     }

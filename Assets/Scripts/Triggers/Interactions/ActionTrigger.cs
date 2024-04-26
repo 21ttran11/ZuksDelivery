@@ -18,6 +18,9 @@ public class ActionTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            if (AudioManager.instance != null)
+                AudioManager.PlaySFX("s_interact", 1.0f);
+
             sceneAction.Interact();
 
             AnimateDeactivation();

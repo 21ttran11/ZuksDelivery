@@ -24,6 +24,8 @@ public class ActionPickUp : SceneAction
     {
         objectToDisplay.SetActive(true);
         objectToDisplay.transform.DOScale(originalScale, 0.3f).SetEase(Ease.OutBack);
+
+        unlockedInteraction.SetActive(true);
     }
 
     private void Update()
@@ -33,7 +35,7 @@ public class ActionPickUp : SceneAction
             objectToDisplay.transform.DOScale(Vector3.zero, 0.3f)
                 .SetEase(Ease.InBack)
                 .OnComplete(() => objectToDisplay.SetActive(false));
-            unlockedInteraction.SetActive(true);
+           // unlockedInteraction.SetActive(true);
         }
     }
 }
