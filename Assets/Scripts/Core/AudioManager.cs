@@ -66,15 +66,31 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public static void PlaySFX(string name, float volume = 1.0f)
+    public static void PlaySFX(string name, float volume = 1.0f, bool loop = false, float pitch = 1.0f)
     {
         if (instance.sfxClips.TryGetValue(name, out AudioClip clip))
         {
-            instance.sfxSource.PlayOneShot(clip, volume);
+            instance.sfxSource.clip = clip;
+            instance.sfxSource.volume = volume;
+            instance.sfxSource.loop = loop;
+            instance.sfxSource.pitch = pitch;
+            instance.sfxSource.Play();
         }
         else
         {
             Debug.LogWarning("SFX clip not found: " + name);
         }
     }
+
+    public static void StopSFX()
+    {
+        instance.sfxSource.Stop();
+        instance.sfxSource.pitch = 1.0f;
+    }
+
+    public static void StopMusic()
+    {
+        instance.musicSource.Stop();
+    }
+
 }

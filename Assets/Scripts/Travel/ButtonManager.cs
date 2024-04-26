@@ -144,6 +144,13 @@ public class ButtonManager : MonoBehaviour
                             ResetAllButtons();
                             StartZoomOut();
                             SetButtonUIVisibility(false);
+
+                            if (AudioManager.instance != null)
+                            {
+                                AudioManager.StopMusic();
+                                AudioManager.PlaySFX("s_exit", 1.0f);
+                            }
+                                
                             StartCoroutine(ChangeSceneWithAnimation(travelSceneStringName));
                         }
                     }
@@ -247,7 +254,7 @@ public class ButtonManager : MonoBehaviour
         if (animator != null)
             animator.Play(animationStringName);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
 
         SceneManager.LoadScene(sceneName);
     }

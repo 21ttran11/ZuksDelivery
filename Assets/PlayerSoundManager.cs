@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerSoundManager : MonoBehaviour
 {
     public float delayMusic = 1f;
+    public string sfxString = "s_enter";
+    public string musicString = "m_post";
 
     private void Start()
     {
         if (AudioManager.instance != null)
-            AudioManager.PlaySFX("s_enter", 1.0f);
+            AudioManager.PlaySFX(sfxString, 1.0f);
         StartCoroutine(PlayMusicWithDelay(delayMusic));
     }
 
@@ -18,6 +20,6 @@ public class PlayerSoundManager : MonoBehaviour
         yield return new WaitForSeconds(delayMusic);
 
         if (AudioManager.instance != null)
-            AudioManager.PlayMusic("m_post", 0.5f);
+            AudioManager.PlayMusic(musicString, 0.5f);
     }
 }

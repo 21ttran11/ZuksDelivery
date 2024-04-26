@@ -544,7 +544,7 @@ Transform:
   m_GameObject: {fileID: 147675859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5316763, y: -0.72, z: -0.022369446}
+  m_LocalPosition: {x: 4.533205, y: -0.72, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3082,7 +3082,7 @@ Transform:
   m_GameObject: {fileID: 1273032191}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4986925, y: -0.45, z: -0.022369446}
+  m_LocalPosition: {x: 4.497928, y: -0.45, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3214,6 +3214,14 @@ PrefabInstance:
     - target: {fileID: 1547873408010261273, guid: 87f42e150508d4810ae5fc11e68a3fb7, type: 3}
       propertyPath: maxSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547873408010261273, guid: 87f42e150508d4810ae5fc11e68a3fb7, type: 3}
+      propertyPath: footstepVolume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547873408010261273, guid: 87f42e150508d4810ae5fc11e68a3fb7, type: 3}
+      propertyPath: footstepStringSfx
+      value: s_walking
       objectReference: {fileID: 0}
     - target: {fileID: 1550318199362922518, guid: 87f42e150508d4810ae5fc11e68a3fb7, type: 3}
       propertyPath: m_LocalScale.x
@@ -4053,7 +4061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7639801694304612738, guid: fd4ae9996003746939d2990e0dc71155, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9189366437855140828, guid: fd4ae9996003746939d2990e0dc71155, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4232,7 +4240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.8459873
+      value: 7.8536305
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.y

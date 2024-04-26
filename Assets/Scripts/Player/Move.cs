@@ -24,12 +24,21 @@ public class Move : MonoBehaviour
     public float sprintSpeed = 6f;
     public bool canSprint = false;
 
+    [SerializeField] private string footstepStringSfx = null;
+    public float footstepVolume = 0.5f;
+    public float footstepPitchVolume = 0.7f;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
         orgSpeed = maxSpeed;
+    }
+
+    private void Start()
+    {
+        StartCoroutine(PlayFootstepSounds());
     }
 
     // Update is called once per frame
@@ -77,6 +86,36 @@ public class Move : MonoBehaviour
         flippedScale.x = -flippedScale.x;
         transform.localScale = flippedScale;
     }
+
+    private IEnumerator PlayFootstepSounds()
+    {
+        bool isPlaying = false;
+
+        while (true)
+        {
+            if (onGround && Mathf.Abs(velocity.x) > 0.1f) 
+            {
+                if (!isPlaying)
+                {
+                    if(AudioManager.instance != null)
+                        AudioManager.PlaySFX(footstepStringSfx, footstepVolume,true, footstepPitchVolume); 
+                    isPlaying = true;
+                }
+            }
+            else
+            {
+                if (isPlaying)
+                {
+                    if (AudioManager.instance != null)
+                        AudioManager.StopSFX();
+                    isPlaying = false;
+                }
+            }
+
+            yield return null; 
+        }
+    }
+
 
 
 

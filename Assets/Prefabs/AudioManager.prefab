@@ -321,6 +321,6 @@ MonoBehaviour:
   - key: s_interact
     clip: {fileID: 8300000, guid: c4797d6767ba146439d5c91e36357ffa, type: 3}
   - key: s_walking
-    clip: {fileID: 8300000, guid: 895c4a6a608ad4128b0c17b346ff4603, type: 3}
+    clip: {fileID: 8300000, guid: 6abb6f6a7884d43c9a535d24fab7db3b, type: 3}
   - key: s_walking_meat
     clip: {fileID: 8300000, guid: 91ba0eb586bd74d12b1bafd70bd614f4, type: 3}
