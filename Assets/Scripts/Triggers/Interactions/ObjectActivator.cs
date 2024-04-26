@@ -20,7 +20,8 @@ public class ObjectActivator : MonoBehaviour
         if (!isDeactivating)
         {
             childObject.SetActive(true);
-            childObject.transform.DOScale(originalScale, 0.5f).SetEase(Ease.OutBack);
+            childObject.transform.DOScale(originalScale, 0.5f)
+                .SetEase(Ease.OutBack);
         }
     }
 
@@ -28,9 +29,19 @@ public class ObjectActivator : MonoBehaviour
     {
         if (!isDeactivating && childObject.activeSelf)
         {
-            StartCoroutine(DeactivateAfterAnimation());
+            isDeactivating = true;
+            childObject.transform.DOScale(Vector3.zero, 0.5f)
+                .SetEase(Ease.InBack)
+                .OnComplete(() => {
+                    if (childObject != null)
+                    {
+                        childObject.SetActive(false);
+                    }
+                    isDeactivating = false;
+                });
         }
     }
+
 
     private IEnumerator DeactivateAfterAnimation()
     {
@@ -52,4 +63,10 @@ public class ObjectActivator : MonoBehaviour
 
         isDeactivating = false;
     }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
 }
