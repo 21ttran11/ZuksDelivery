@@ -13,6 +13,11 @@ public class EmailClick : MonoBehaviour
     private void Awake()
     {
         mainCamera = Camera.main;
+
+        if(AudioManager.instance != null)
+        {
+            AudioManager.PlayMusic("m_room");
+        }
     }
 
     public void OnClick(InputAction.CallbackContext context)

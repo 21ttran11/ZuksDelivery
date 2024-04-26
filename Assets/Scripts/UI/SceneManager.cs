@@ -27,9 +27,15 @@ public class ChangeScene : MonoBehaviour
             yield break;
         }
 
+        if(AudioManager.instance != null)
+        {
+            AudioManager.StopMusic();
+            AudioManager.PlaySFX("s_exit", 1.0f);
+        }
+
         animator.Play(animationStringName);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
 
         SceneManager.LoadScene(sceneName);
     }

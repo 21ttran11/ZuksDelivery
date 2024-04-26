@@ -309,6 +309,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 55f4f651b93d3b84b83dfd22b86bc178, type: 3}
   - key: m_post
     clip: {fileID: 8300000, guid: c5a062ecbb40e834e9893b6ca9abe00f, type: 3}
+  - key: m_meat
+    clip: {fileID: 8300000, guid: 0f26f2deb8c4545279cec365f200c315, type: 3}
   sfxEntries:
   - key: s_click00
     clip: {fileID: 8300000, guid: 6820c81e913bb494aa7ac5e01d2fec05, type: 3}
