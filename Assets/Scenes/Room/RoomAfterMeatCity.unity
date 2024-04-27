@@ -2674,7 +2674,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   conversationStartNode: Zuk3
   move: 1
-  activate: {fileID: 0}
+  activate: {fileID: 1150448322}
   dialogueRunner: {fileID: 1752863051}
   deactivate: {fileID: 1738685885}
   deactivateDialogue: {fileID: 1015190408}
