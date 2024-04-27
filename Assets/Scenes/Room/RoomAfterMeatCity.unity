@@ -1483,6 +1483,22 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5344351335973930684, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344351335973930684, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344351335973930684, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344351335973930684, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281085137
+      objectReference: {fileID: 0}
     - target: {fileID: 5797125245348912542, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
       propertyPath: m_Name
       value: Mom Dialogue Runner
