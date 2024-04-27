@@ -55,10 +55,12 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift) && canSprint)
         {
             maxSpeed = sprintSpeed;
+            animator.SetBool("Skating", true);
         }
         else
         {
             maxSpeed = orgSpeed;
+            animator.SetBool("Skating", false);
         }
     }
 
