@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class statemachinebehaviormanager : MonoBehaviour
+public class StateMachineBehaviourManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject arm;
+    public GameObject foot;
+
+    private Animator animator;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        InitializeStateMachineBehaviours();
     }
 
-    // Update is called once per frame
-    void Update()
+    void InitializeStateMachineBehaviours()
     {
-        
+        foreach (var behaviour in animator.GetBehaviours<activate>())
+        {
+            behaviour.Initialize(arm, foot);
+        }
     }
 }
