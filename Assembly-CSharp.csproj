@@ -108,6 +108,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
+    <Compile Include="Assets/activate.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionSceneChange.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="Assets/Scripts/Parallax/ParallaxCamera.cs" />
     <Compile Include="Assets/Scripts/Core/Activate.cs" />
     <Compile Include="Assets/Scripts/Triggers/Interactions/ActionDialogueTravel.cs" />
+    <Compile Include="Assets/statemachinebehaviormanager.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/RadialPlatform.cs" />
     <Compile Include="Assets/Settings/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />

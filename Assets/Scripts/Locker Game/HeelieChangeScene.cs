@@ -9,6 +9,7 @@ public class HeelieChangeScene : MonoBehaviour
     public Animator heelieFall;
     public Animator cameraPan;
 
+
     private Camera mainCamera;
 
     [SerializeField]
@@ -20,6 +21,11 @@ public class HeelieChangeScene : MonoBehaviour
 
     [SerializeField]
     private GameObject droppedDialogue;
+
+    [SerializeField]
+    private GameObject arm;
+    [SerializeField]
+    private GameObject foot;
 
     private bool fell = false;
 
@@ -87,6 +93,8 @@ public class HeelieChangeScene : MonoBehaviour
             heelieFall.SetBool("Falling", true);
             droppedDialogue.SetActive(true);
             fell = true;
+            arm.SetActive(false);
+            foot.SetActive(true);
             CameraPan();
         }
 
