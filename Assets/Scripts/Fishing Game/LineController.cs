@@ -5,9 +5,16 @@ using UnityEngine;
 public class LineController : MonoBehaviour
 {
     [SerializeField]
-    private float duration = 2.0f;
+    private float duration = 0.7f;
 
-    private float scaleFactor = 1.0f;
+    private float scaleFactor = 0.5f;
+
+    private Vector2 minSize;
+
+    private void Start()
+    {
+        minSize = transform.localScale;
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,15 +30,31 @@ public class LineController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            //FishingLineShorten(duration, currentScale);
+            if(transform.localScale.y > minSize.y)
+            {
+                StartCoroutine(FishingLineShorten(duration, currentScale));
+            }
         }
 
 
     }
 
-    private void FishingLineShorten(float duration, Vector2 currentScale)
+    private IEnumerator FishingLineShorten(float duration, Vector2 currentScale)
     {
+        var elapsed = 0f;
+        var startScale = transform.localScale;
+        currentScale.y -= scaleFactor;
+        var endScale = currentScale;
 
+        while(elapsed < duration)
+        {
+            var t = elapsed / duration;
+            transform.localScale = Vector2.Lerp(startScale, endScale, t);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localScale = endScale;
     }
 
     private IEnumerator FishingLineExtend(float duration, Vector2 currentScale)

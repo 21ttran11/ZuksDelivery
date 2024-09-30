@@ -62,6 +62,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/TaroTile.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
+    <Compile Include="Assets/KeepSize.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/StateLoader.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/CameraFollow.cs" />
