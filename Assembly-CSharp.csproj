@@ -107,6 +107,7 @@
     <Compile Include="Assets/Scripts/Dialogue/DialougeCanvasFollow.cs" />
     <Compile Include="Assets/Scripts/Core/Deactivate.cs" />
     <Compile Include="Assets/Scripts/UI/EmailClick.cs" />
+    <Compile Include="Assets/Scripts/Fishing Game/FishSpawner.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Lap.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
