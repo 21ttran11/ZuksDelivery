@@ -7,6 +7,7 @@ public class ObjectActivator : MonoBehaviour
     private Vector3 originalScale;
     private GameObject childObject;
     private bool isDeactivating = false;
+    public bool withinRange = false;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class ObjectActivator : MonoBehaviour
     {
         if (!isDeactivating)
         {
+            withinRange = true;
             childObject.SetActive(true);
             childObject.transform.DOScale(originalScale, 0.5f)
                 .SetEase(Ease.OutBack);
@@ -27,6 +29,7 @@ public class ObjectActivator : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        withinRange = false;
         if (!isDeactivating && childObject.activeSelf)
         {
             isDeactivating = true;
@@ -48,7 +51,6 @@ public class ObjectActivator : MonoBehaviour
         isDeactivating = true;
 
         childObject.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack);
-        Debug.Log("Object Activator: Starting scale down animation.");
 
         yield return new WaitForSeconds(0.6f);
 
