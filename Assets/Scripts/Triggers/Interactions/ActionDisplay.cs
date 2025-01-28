@@ -11,14 +11,13 @@ public class ActionDisplay : SceneAction
     private void Start()
     {
         originalScale = objectToDisplay.transform.localScale;
-
-        objectToDisplay.SetActive(false);
+        EventBus.Publish(new EventData("Activate", objectToDisplay));
         objectToDisplay.transform.localScale = Vector3.zero;
     }
 
     public override void Interact()
     {
-        objectToDisplay.SetActive(true);
+        EventBus.Publish(new EventData("PickupTriggered", objectToDisplay));
         objectToDisplay.transform.DOScale(originalScale, 0.3f).SetEase(Ease.OutBack);
     }
 

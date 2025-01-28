@@ -8,8 +8,7 @@ public class InteractionManager : MonoBehaviour
     private GameObject[] interactablesInScene;
     private GameObject activeObject;
 
-    [SerializeField]
-    public List<GameObject> currentActives = new List<GameObject>();
+    private List<GameObject> currentActives = new List<GameObject>();
 
     [SerializeField]
     private bool withinRange;
@@ -43,7 +42,6 @@ public class InteractionManager : MonoBehaviour
                     if (!(currentActives.Contains(obj)))
                     {
                         currentActives.Add(obj);
-                        Debug.Log(obj + "added");
                     }
                 }
             }
