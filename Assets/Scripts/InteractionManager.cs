@@ -10,6 +10,8 @@ public class InteractionManager : MonoBehaviour
 
     private List<GameObject> currentActives = new List<GameObject>();
 
+    private bool interacting = false;
+
     [SerializeField]
     private bool withinRange;
 

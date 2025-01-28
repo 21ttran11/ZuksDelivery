@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject[] interactablesInScene;
+
+    private List<GameObject> currentActives = new List<GameObject>();
+
     private void OnEnable()
     {
         EventBus.OnEventTriggered += HandleEvent; // subscribe event
@@ -24,8 +29,11 @@ public class EventManager : MonoBehaviour
             case "Deactivate":
                 Deactivate(eventData);
                 break;
-            case "Travel":
-                Travel(eventData);
+            case "PauseObjects":
+                PauseObjects(eventData);
+                break;
+            case "UnpauseObjects":
+                UnpauseObjects(eventData);
                 break;
         }
     }
@@ -74,8 +82,30 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    private void Travel(EventData eventData)
+    private void PauseObjects(EventData eventData)
     {
-        
+        GameObject activeObject = eventData.Data as GameObject;
+        foreach (GameObject obj in interactablesInScene)
+        {
+            if (obj != activeObject)
+            {
+                if (obj.activeInHierarchy)
+                {
+                    obj.SetActive(false);
+                    if (!(currentActives.Contains(obj)))
+                    {
+                        currentActives.Add(obj);
+                    }
+                }
+            }
+        }
+    }
+
+    private void UnpauseObjects(EventData eventData)
+    {
+        foreach (GameObject obj in currentActives)
+        {
+            obj.SetActive(true);
+        }
     }
 }

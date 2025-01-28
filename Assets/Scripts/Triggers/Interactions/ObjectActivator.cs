@@ -18,6 +18,7 @@ public class ObjectActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        EventBus.Publish(new EventData("PauseObjects", this.gameObject));
         if (!isDeactivating)
         {
             withinRange = true;
@@ -29,7 +30,6 @@ public class ObjectActivator : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        withinRange = false;
         if (!isDeactivating && childObject.activeSelf)
         {
             isDeactivating = true;
@@ -43,6 +43,7 @@ public class ObjectActivator : MonoBehaviour
                     isDeactivating = false;
                 });
         }
+        EventBus.Publish(new EventData("UnpauseObjects", this.gameObject));
     }
 
 

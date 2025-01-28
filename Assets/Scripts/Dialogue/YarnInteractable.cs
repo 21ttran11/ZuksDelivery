@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class YarnInteractable : SceneAction
+public class YarnInteractable : MonoBehaviour
 {
     [SerializeField] private string conversationStartNode;
     private bool dialogue;
@@ -13,11 +13,6 @@ public class YarnInteractable : SceneAction
 
     [SerializeField]
     private GameObject activate;
-
-    public override void Interact()
-    {
-        played = false;
-    }
 
     [SerializeField]
     public DialogueRunner dialogueRunner;
@@ -30,7 +25,6 @@ public class YarnInteractable : SceneAction
     public void Start()
     {
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
-
     }
 
     public void Update()
@@ -53,15 +47,14 @@ public class YarnInteractable : SceneAction
 
     private void EndConversation()
     {
-        played = true;
         if (isCurrentConversation)
         {
             isCurrentConversation = false;
             if (activate != null)
             {
-                activate.SetActive(true);
+                EventBus.Publish(new EventData("Activate", activate));
             }
-            else return;
+            this.gameObject.SetActive(false);
         }
     }
 

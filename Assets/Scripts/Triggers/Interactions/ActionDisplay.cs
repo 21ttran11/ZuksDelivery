@@ -12,7 +12,6 @@ public class ActionDisplay : SceneAction
     private void Start()
     {
         originalScale = objectToDisplay.transform.localScale;
-        //EventBus.Publish(new EventData("Activate", objectToDisplay));
         objectToDisplay.transform.localScale = Vector3.zero;
     }
 
@@ -27,6 +26,7 @@ public class ActionDisplay : SceneAction
     {
         if (Input.GetKeyDown(KeyCode.Q) && displaying == true)
         {
+
             objectToDisplay.transform.DOScale(Vector3.zero, 0.3f)
                 .SetEase(Ease.InBack)
                 .OnComplete(() => EventBus.Publish(new EventData("Deactivate", objectToDisplay)));
