@@ -7,6 +7,7 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     private GameObject[] interactablesInScene;
 
+    [SerializeField]
     private List<GameObject> currentActives = new List<GameObject>();
 
     private void OnEnable()
@@ -87,18 +88,16 @@ public class EventManager : MonoBehaviour
         GameObject activeObject = eventData.Data as GameObject;
         foreach (GameObject obj in interactablesInScene)
         {
-            if (obj != activeObject)
+            if (obj != activeObject && obj.activeInHierarchy)
             {
-                if (obj.activeInHierarchy)
-                {
-                    obj.SetActive(false);
-                    if (!(currentActives.Contains(obj)))
+                obj.SetActive(false);
+
+                if (!(currentActives.Contains(obj)))
                     {
                         currentActives.Add(obj);
                     }
                 }
             }
-        }
     }
 
     private void UnpauseObjects(EventData eventData)
@@ -107,5 +106,6 @@ public class EventManager : MonoBehaviour
         {
             obj.SetActive(true);
         }
+        currentActives.Clear();
     }
 }
