@@ -9,7 +9,7 @@ public class InteractionManager : MonoBehaviour
     private GameObject activeObject;
 
     [SerializeField]
-    List<GameObject> currentActives = new List<GameObject>();
+    public List<GameObject> currentActives = new List<GameObject>();
 
     [SerializeField]
     private bool withinRange;
@@ -43,6 +43,7 @@ public class InteractionManager : MonoBehaviour
                     if (!(currentActives.Contains(obj)))
                     {
                         currentActives.Add(obj);
+                        Debug.Log(obj + "added");
                     }
                 }
             }

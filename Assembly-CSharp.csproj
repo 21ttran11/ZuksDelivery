@@ -63,7 +63,6 @@
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/TaroTile.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/StateLoader.cs" />
-    <Compile Include="Assets/InteractionManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/CameraFollow.cs" />
     <Compile Include="Assets/Scripts/Parallax/ParallaxLayer.cs" />
@@ -122,6 +121,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
+    <Compile Include="Assets/Scripts/InteractionManager.cs" />
     <Compile Include="Assets/Scripts/Locker Game/HeelieEnd.cs" />
     <Compile Include="Assets/Scripts/UI/VisibleCursor.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
