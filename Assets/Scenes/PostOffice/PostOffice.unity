@@ -785,7 +785,6 @@ MonoBehaviour:
   - {fileID: 214829817}
   - {fileID: 470476985}
   - {fileID: 1821202127}
-  currentActives: []
   withinRange: 0
 --- !u!4 &240565862
 Transform:
@@ -3778,7 +3777,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1616145109}
   - component: {fileID: 1616145110}
-  - component: {fileID: 1616145111}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -3820,19 +3818,6 @@ MonoBehaviour:
   dialogueRunner: {fileID: 39684445373256552}
   deactivate: {fileID: 470476985}
   deactivateDialogue: {fileID: 1616145108}
---- !u!114 &1616145111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616145108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1821202127}
 --- !u!1 &1620848357
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,6 +4649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1870343589}
+  - component: {fileID: 1870343590}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -4686,6 +4672,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1870343590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870343588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae252fc0dfca94a3698d96150d8969cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921145416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,6 +4693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1921145417}
+  - component: {fileID: 1921145418}
   m_Layer: 0
   m_Name: EventBus
   m_TagString: Untagged
@@ -4717,6 +4716,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921145418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921145416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0884eceb9d287477ea0dfab0cef5fc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1954352827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8794250840431098398, guid: 91f049e160c21724d832eb4eece5474f, type: 3}

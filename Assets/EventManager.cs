@@ -34,6 +34,7 @@ public class EventManager : MonoBehaviour
     {
         if (eventData.Data is GameObject singleObject)
         {
+            Debug.Log(singleObject + " Activated");
             singleObject.SetActive(true);
         }
 
@@ -41,6 +42,7 @@ public class EventManager : MonoBehaviour
         {
             foreach (var obj in objectList)
             {
+                Debug.Log(obj + " Activated");
                 obj.SetActive(true);
             }
         }
