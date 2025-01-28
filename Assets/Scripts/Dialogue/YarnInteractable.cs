@@ -16,32 +16,21 @@ public class YarnInteractable : SceneAction
 
     public override void Interact()
     {
-        Debug.Log("Dialogue is triggered");
+        played = false;
     }
 
     [SerializeField]
     public DialogueRunner dialogueRunner;
-
-    [SerializeField]
-    private GameObject deactivate;
-    [SerializeField]
-    private GameObject deactivateDialogue;
 
     private bool interactable = true;
     private bool isCurrentConversation = false;
     private float defaultIndicatorIntensity;
     private bool played = false;
 
-    private Move playerMovement;
-    private float orgSpeed = 0f;
-
     public void Start()
     {
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
-        playerMovement = FindObjectOfType<Move>();
 
-        if(playerMovement != null)
-            orgSpeed = playerMovement.maxSpeed;
     }
 
     public void Update()
@@ -60,34 +49,20 @@ public class YarnInteractable : SceneAction
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
         dialogueRunner.StartDialogue(conversationStartNode);
-
-        if (move == false)
-        {
-            playerMovement.maxSpeed = 0;
-        }
-
     }
 
     private void EndConversation()
     {
+        played = true;
         if (isCurrentConversation)
         {
             isCurrentConversation = false;
-            if (deactivate != null)
-            {
-                deactivate.SetActive(false);
-                deactivateDialogue.SetActive(false);
-            }
-
             if (activate != null)
             {
                 activate.SetActive(true);
             }
             else return;
         }
-
-        if(playerMovement != null)
-            playerMovement.maxSpeed = orgSpeed;
     }
 
     //    [YarnCommand("disable")]

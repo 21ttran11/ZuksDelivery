@@ -8,24 +8,30 @@ public class ActionPickUp : SceneAction
     public GameObject objectToDisplay;
     private Vector3 originalScale;
 
-
     [SerializeField]
-    private GameObject unlockedInteraction;
+    private List<GameObject> progressionObjects;
+    [SerializeField]
+    private List<GameObject> pastObjects;
+
+    private int opened = 0;
 
     private void Start()
     {
         originalScale = objectToDisplay.transform.localScale;
-
-        objectToDisplay.SetActive(false);
         objectToDisplay.transform.localScale = Vector3.zero;
     }
 
     public override void Interact()
     {
-        objectToDisplay.SetActive(true);
-        objectToDisplay.transform.DOScale(originalScale, 0.3f).SetEase(Ease.OutBack);
+        if(opened == 0)
+        {
+            EventBus.Publish(new EventData("Deactivate", pastObjects));
+            EventBus.Publish(new EventData("Activate", progressionObjects));
+            opened++;
+        }
 
-        unlockedInteraction.SetActive(true);
+        EventBus.Publish(new EventData("Activate", objectToDisplay));
+        objectToDisplay.transform.DOScale(originalScale, 0.3f).SetEase(Ease.OutBack);
     }
 
     private void Update()
@@ -34,8 +40,7 @@ public class ActionPickUp : SceneAction
         {
             objectToDisplay.transform.DOScale(Vector3.zero, 0.3f)
                 .SetEase(Ease.InBack)
-                .OnComplete(() => objectToDisplay.SetActive(false));
-           // unlockedInteraction.SetActive(true);
+                .OnComplete(() => EventBus.Publish(new EventData("Deactivate", objectToDisplay)));
         }
     }
 }
