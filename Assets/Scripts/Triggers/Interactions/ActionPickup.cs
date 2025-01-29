@@ -30,6 +30,7 @@ public class ActionPickUp : SceneAction
             opened++;
         }
 
+        EventBus.Publish(new InteractionEventData(true, this.gameObject));
         EventBus.Publish(new EventData("Activate", objectToDisplay));
         objectToDisplay.transform.DOScale(originalScale, 0.3f).SetEase(Ease.OutBack);
     }
@@ -38,6 +39,7 @@ public class ActionPickUp : SceneAction
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            EventBus.Publish(new InteractionEventData(false, this.gameObject));
             objectToDisplay.transform.DOScale(Vector3.zero, 0.3f)
                 .SetEase(Ease.InBack)
                 .OnComplete(() => EventBus.Publish(new EventData("Deactivate", objectToDisplay)));

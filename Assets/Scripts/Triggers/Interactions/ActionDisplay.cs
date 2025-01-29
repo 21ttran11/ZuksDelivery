@@ -19,7 +19,7 @@ public class ActionDisplay : SceneAction
     {
         if (interactable)
         {
-            EventBus.Publish(new InteractionEventData(true, this.gameObject)); // Notify others
+            EventBus.Publish(new InteractionEventData(true, this.gameObject));
             EventBus.Publish(new EventData("Activate", objectToDisplay));
 
             objectToDisplay.transform.DOScale(originalScale, 0.3f)
