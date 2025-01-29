@@ -23,8 +23,7 @@ public class ActionDisplay : SceneAction
             EventBus.Publish(new EventData("Activate", objectToDisplay));
 
             objectToDisplay.transform.DOScale(originalScale, 0.3f)
-                .SetEase(Ease.OutBack)
-                .OnComplete(() => EventBus.Publish(new InteractionEventData(false, this.gameObject))); // Restore after animation
+                .SetEase(Ease.OutBack);
 
             displaying = true;
         }
@@ -34,6 +33,7 @@ public class ActionDisplay : SceneAction
     {
         if (Input.GetKeyDown(KeyCode.Q) && displaying == true)
         {
+            EventBus.Publish(new InteractionEventData(false, this.gameObject));
             objectToDisplay.transform.DOScale(Vector3.zero, 0.3f)
                 .SetEase(Ease.InBack)
                 .OnComplete(() => EventBus.Publish(new EventData("Deactivate", objectToDisplay)));

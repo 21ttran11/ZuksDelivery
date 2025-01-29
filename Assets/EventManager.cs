@@ -16,19 +16,6 @@ public class EventManager : MonoBehaviour
         EventBus.Unsubscribe("Deactivate", Deactivate);
     }
 
-    private void HandleEvent(EventData eventData)
-    {
-        switch (eventData.EventName)
-        {
-            case "Activate":
-                Activate(eventData);
-                break;
-            case "Deactivate":
-                Deactivate(eventData);
-                break;
-        }
-    }
-
     private void Activate(EventData eventData)
     {
         if (eventData.Data is GameObject singleObject)
@@ -45,7 +32,6 @@ public class EventManager : MonoBehaviour
                 obj.SetActive(true);
             }
         }
-
         else
         {
             Debug.Log("No activatable");
