@@ -17,10 +17,17 @@ public class ActionDisplay : SceneAction
 
     public override void Interact()
     {
-        //EventBus.Publish(new EventData("PauseObjects", this.gameObject));
-        EventBus.Publish(new EventData("Activate", objectToDisplay));
-        objectToDisplay.transform.DOScale(originalScale, 0.3f).SetEase(Ease.OutBack);
-        displaying = true;
+        if (interactable)
+        {
+            EventBus.Publish(new InteractionEventData(true, this.gameObject)); // Notify others
+            EventBus.Publish(new EventData("Activate", objectToDisplay));
+
+            objectToDisplay.transform.DOScale(originalScale, 0.3f)
+                .SetEase(Ease.OutBack)
+                .OnComplete(() => EventBus.Publish(new InteractionEventData(false, this.gameObject))); // Restore after animation
+
+            displaying = true;
+        }
     }
 
     private void Update()
@@ -31,7 +38,6 @@ public class ActionDisplay : SceneAction
                 .SetEase(Ease.InBack)
                 .OnComplete(() => EventBus.Publish(new EventData("Deactivate", objectToDisplay)));
             displaying = false;
-            //EventBus.Publish(new EventData("UnpauseObjects", objectToDisplay));
         }
     }
 }

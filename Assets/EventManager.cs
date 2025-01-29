@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] interactablesInScene;
-
-    [SerializeField]
-    private List<GameObject> currentActives = new List<GameObject>();
-
     private void OnEnable()
     {
-        EventBus.OnEventTriggered += HandleEvent; // subscribe event
+        EventBus.Subscribe("Activate", Activate);
+        EventBus.Subscribe("Deactivate", Deactivate);
     }
 
     private void OnDisable()
     {
-        EventBus.OnEventTriggered -= HandleEvent; // unsubscribe event
+        EventBus.Unsubscribe("Activate", Activate);
+        EventBus.Unsubscribe("Deactivate", Deactivate);
     }
 
     private void HandleEvent(EventData eventData)
@@ -29,12 +25,6 @@ public class EventManager : MonoBehaviour
                 break;
             case "Deactivate":
                 Deactivate(eventData);
-                break;
-            case "PauseObjects":
-                PauseObjects(eventData);
-                break;
-            case "UnpauseObjects":
-                UnpauseObjects(eventData);
                 break;
         }
     }
@@ -81,31 +71,5 @@ public class EventManager : MonoBehaviour
         {
             Debug.Log("No deactivatable");
         }
-    }
-
-    private void PauseObjects(EventData eventData)
-    {
-        GameObject activeObject = eventData.Data as GameObject;
-        foreach (GameObject obj in interactablesInScene)
-        {
-            if (obj != activeObject && obj.activeInHierarchy)
-            {
-                obj.SetActive(false);
-
-                if (!(currentActives.Contains(obj)))
-                    {
-                        currentActives.Add(obj);
-                    }
-                }
-            }
-    }
-
-    private void UnpauseObjects(EventData eventData)
-    {
-        foreach (GameObject obj in currentActives)
-        {
-            obj.SetActive(true);
-        }
-        currentActives.Clear();
     }
 }

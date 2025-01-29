@@ -2,26 +2,29 @@ using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 
-public class ObjectActivator : MonoBehaviour
+public class ObjectActivator : SceneAction
 {
     private Vector3 originalScale;
     private GameObject childObject;
     private bool isDeactivating = false;
-    public bool withinRange = false;
+
+    public override void Interact()
+    {
+        
+    }
 
     private void Start()
     {
         childObject = transform.GetChild(0).gameObject;
         originalScale = childObject.transform.localScale;
-        childObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        EventBus.Publish(new EventData("PauseObjects", this.gameObject));
-        if (!isDeactivating)
+        if (!isDeactivating && interactable == true)
         {
-            withinRange = true;
+            EventBus.Publish(new InteractionEventData(true, this.gameObject)); 
+
             childObject.SetActive(true);
             childObject.transform.DOScale(originalScale, 0.5f)
                 .SetEase(Ease.OutBack);
@@ -30,7 +33,7 @@ public class ObjectActivator : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!isDeactivating && childObject.activeSelf)
+        if (!isDeactivating && childObject.activeSelf && interactable == true)
         {
             isDeactivating = true;
             childObject.transform.DOScale(Vector3.zero, 0.5f)
@@ -41,9 +44,9 @@ public class ObjectActivator : MonoBehaviour
                         childObject.SetActive(false);
                     }
                     isDeactivating = false;
+                    EventBus.Publish(new InteractionEventData(false, this.gameObject));
                 });
         }
-        EventBus.Publish(new EventData("UnpauseObjects", this.gameObject));
     }
 
 

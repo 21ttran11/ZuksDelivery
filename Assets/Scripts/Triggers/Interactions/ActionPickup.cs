@@ -23,7 +23,7 @@ public class ActionPickUp : SceneAction
 
     public override void Interact()
     {
-        if(opened == 0)
+        if(opened == 0 && interactable)
         {
             EventBus.Publish(new EventData("Deactivate", pastObjects));
             EventBus.Publish(new EventData("Activate", progressionObjects));
