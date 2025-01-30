@@ -21,6 +21,7 @@ public class ActionDisplay : SceneAction
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject));
             EventBus.Publish(new EventData("Activate", objectToDisplay));
+            Display();
         }
     }
 
