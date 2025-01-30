@@ -19,8 +19,6 @@ public class YarnInteractable : MonoBehaviour
 
     private bool interactable = true;
     private bool isCurrentConversation = false;
-    private float defaultIndicatorIntensity;
-    private bool played = false;
 
     public void Start()
     {
@@ -29,12 +27,10 @@ public class YarnInteractable : MonoBehaviour
 
     public void Update()
     {
-        if (played == false)
+        if (interactable && !dialogueRunner.IsDialogueRunning)
         {
-            if (interactable && !dialogueRunner.IsDialogueRunning)
-            {
-                StartConversation();
-            }
+            EventBus.Publish(new InteractionEventData(true, this.gameObject));
+            StartConversation();
         }
     }
 
@@ -54,6 +50,7 @@ public class YarnInteractable : MonoBehaviour
             {
                 EventBus.Publish(new EventData("Activate", activate));
             }
+            EventBus.Publish(new InteractionEventData(false, this.gameObject));
             this.gameObject.SetActive(false);
         }
     }

@@ -21,7 +21,7 @@ public class ObjectActivator : SceneAction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isDeactivating && interactable == true)
+        if (!isDeactivating && interactable)
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject)); 
 
@@ -33,7 +33,7 @@ public class ObjectActivator : SceneAction
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!isDeactivating && childObject.activeSelf && interactable == true)
+        if (!isDeactivating && childObject.activeSelf && interactable)
         {
             isDeactivating = true;
             childObject.transform.DOScale(Vector3.zero, 0.5f)

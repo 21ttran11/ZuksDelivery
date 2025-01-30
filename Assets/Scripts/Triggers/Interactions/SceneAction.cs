@@ -4,6 +4,7 @@ public abstract class SceneAction : MonoBehaviour
 {
     [SerializeField] private Sprite actionIcon = null;
     public virtual bool interactable { get; set; } = true;
+    public virtual GameObject currentlyActivated { get; set; }
 
     private void OnEnable()
     {
@@ -21,6 +22,7 @@ public abstract class SceneAction : MonoBehaviour
         {
             if (interactionData.Source != this.gameObject && !this.transform.IsChildOf(interactionData.Source.transform))
             {
+                currentlyActivated = interactionData.Source;
                 interactable = !interactionData.IsInteracting;
             }
         }
