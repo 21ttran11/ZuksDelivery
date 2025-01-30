@@ -22,7 +22,6 @@ public abstract class SceneAction : MonoBehaviour
         {
             if (interactionData.Source != this.gameObject && !this.transform.IsChildOf(interactionData.Source.transform))
             {
-                currentlyActivated = interactionData.Source;
                 interactable = !interactionData.IsInteracting;
             }
         }

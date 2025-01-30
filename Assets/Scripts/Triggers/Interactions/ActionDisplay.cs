@@ -21,15 +21,17 @@ public class ActionDisplay : SceneAction
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject));
             EventBus.Publish(new EventData("Activate", objectToDisplay));
-
-            objectToDisplay.transform.DOScale(originalScale, 0.3f)
-                .SetEase(Ease.OutBack);
-
-            displaying = true;
         }
     }
 
-    private void Update()
+    public void Display()
+    {
+        objectToDisplay.transform.DOScale(originalScale, 0.3f)
+            .SetEase(Ease.OutBack);
+
+        displaying = true;
+    }
+    protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q) && displaying == true)
         {
