@@ -21,6 +21,7 @@ public class ActionDisplay : SceneAction
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject));
             EventBus.Publish(new EventData("Activate", objectToDisplay));
+            Display();
         }
     }
 
@@ -31,6 +32,7 @@ public class ActionDisplay : SceneAction
 
         displaying = true;
     }
+
     protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q) && displaying == true)
