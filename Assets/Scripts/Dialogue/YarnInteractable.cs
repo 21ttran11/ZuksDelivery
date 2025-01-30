@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class YarnInteractable : SceneAction
+public class YarnInteractable : MonoBehaviour
 {
     [SerializeField] private string conversationStartNode;
     private bool dialogue;
@@ -14,44 +14,23 @@ public class YarnInteractable : SceneAction
     [SerializeField]
     private GameObject activate;
 
-    public override void Interact()
-    {
-        Debug.Log("Dialogue is triggered");
-    }
-
     [SerializeField]
     public DialogueRunner dialogueRunner;
 
-    [SerializeField]
-    private GameObject deactivate;
-    [SerializeField]
-    private GameObject deactivateDialogue;
-
     private bool interactable = true;
     private bool isCurrentConversation = false;
-    private float defaultIndicatorIntensity;
-    private bool played = false;
-
-    private Move playerMovement;
-    private float orgSpeed = 0f;
 
     public void Start()
     {
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
-        playerMovement = FindObjectOfType<Move>();
-
-        if(playerMovement != null)
-            orgSpeed = playerMovement.maxSpeed;
     }
 
     public void Update()
     {
-        if (played == false)
+        if (interactable && !dialogueRunner.IsDialogueRunning)
         {
-            if (interactable && !dialogueRunner.IsDialogueRunning)
-            {
-                StartConversation();
-            }
+            EventBus.Publish(new InteractionEventData(true, this.gameObject));
+            StartConversation();
         }
     }
 
@@ -60,12 +39,6 @@ public class YarnInteractable : SceneAction
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
         dialogueRunner.StartDialogue(conversationStartNode);
-
-        if (move == false)
-        {
-            playerMovement.maxSpeed = 0;
-        }
-
     }
 
     private void EndConversation()
@@ -73,21 +46,13 @@ public class YarnInteractable : SceneAction
         if (isCurrentConversation)
         {
             isCurrentConversation = false;
-            if (deactivate != null)
-            {
-                deactivate.SetActive(false);
-                deactivateDialogue.SetActive(false);
-            }
-
             if (activate != null)
             {
-                activate.SetActive(true);
+                EventBus.Publish(new EventData("Activate", activate));
             }
-            else return;
+            EventBus.Publish(new InteractionEventData(false, this.gameObject));
+            this.gameObject.SetActive(false);
         }
-
-        if(playerMovement != null)
-            playerMovement.maxSpeed = orgSpeed;
     }
 
     //    [YarnCommand("disable")]

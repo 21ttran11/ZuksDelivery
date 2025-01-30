@@ -93,8 +93,10 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/GridTerrainGenerator.cs" />
     <Compile Include="Assets/Scripts/Locker Game/HeelieChangeScene.cs" />
+    <Compile Include="Assets/EventBus.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Scripts/Travel/ButtonController.cs" />
+    <Compile Include="Assets/EventManager.cs" />
     <Compile Include="Assets/Scripts/Travel/ButtonManager.cs" />
     <Compile Include="Assets/Scripts/Animations/TalkingAnimation.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Platforms/PatrolPlatform.cs" />
@@ -121,6 +123,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Input/PlayerInputActions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
+    <Compile Include="Assets/Scripts/InteractionManager.cs" />
     <Compile Include="Assets/Scripts/Locker Game/HeelieEnd.cs" />
     <Compile Include="Assets/Scripts/UI/VisibleCursor.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
