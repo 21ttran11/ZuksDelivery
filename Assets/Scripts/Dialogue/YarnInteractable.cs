@@ -5,14 +5,13 @@ using Yarn.Unity;
 
 public class YarnInteractable : MonoBehaviour
 {
-    [SerializeField] private string conversationStartNode;
-    private bool dialogue;
+    [SerializeField]
+    private List<GameObject> progressionObjects;
+    [SerializeField]
+    private List<GameObject> pastObjects;
 
     [SerializeField]
-    private bool move;
-
-    [SerializeField]
-    private GameObject activate;
+    private string conversationStartNode;
 
     [SerializeField]
     public DialogueRunner dialogueRunner;
@@ -46,9 +45,13 @@ public class YarnInteractable : MonoBehaviour
         if (isCurrentConversation)
         {
             isCurrentConversation = false;
-            if (activate != null)
+            if (progressionObjects != null)
             {
-                EventBus.Publish(new EventData("Activate", activate));
+                EventBus.Publish(new EventData("Activate", progressionObjects));
+            }
+            if (pastObjects != null)
+            {
+                EventBus.Publish(new EventData("Deactivate", pastObjects));
             }
             EventBus.Publish(new InteractionEventData(false, this.gameObject));
             this.gameObject.SetActive(false);
