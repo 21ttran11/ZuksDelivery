@@ -17,6 +17,7 @@ public class ObjectActivator : SceneAction
     {
         childObject = transform.GetChild(0).gameObject;
         originalScale = childObject.transform.localScale;
+        childObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,6 +36,7 @@ public class ObjectActivator : SceneAction
     {
         if (!isDeactivating && childObject.activeSelf && interactable)
         {
+    
             isDeactivating = true;
             childObject.transform.DOScale(Vector3.zero, 0.5f)
                 .SetEase(Ease.InBack)

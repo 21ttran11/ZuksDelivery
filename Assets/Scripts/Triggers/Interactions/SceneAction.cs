@@ -20,6 +20,15 @@ public abstract class SceneAction : MonoBehaviour
     {
         if (eventData is InteractionEventData interactionData)
         {
+            if (currentlyActivated != null && currentlyActivated != interactionData.Source)
+            {
+                currentlyActivated.GetComponent<SceneAction>().interactable = false;
+            }
+
+            currentlyActivated = interactionData.Source;
+            currentlyActivated.GetComponent<SceneAction>().interactable = true;
+            
+
             if (interactionData.Source != this.gameObject && !this.transform.IsChildOf(interactionData.Source.transform))
             {
                 interactable = !interactionData.IsInteracting;
