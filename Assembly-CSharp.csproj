@@ -70,6 +70,7 @@
     <Compile Include="Assets/Scripts/Parallax/ParallaxLayer.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/Scripts/PlayerAnimator.cs" />
+    <Compile Include="Assets/BubbleAnimation.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets/Scripts/Dialogue/DialougeCanvasFollow.cs" />
     <Compile Include="Assets/Scripts/Core/Deactivate.cs" />
     <Compile Include="Assets/Scripts/UI/EmailClick.cs" />
+    <Compile Include="Assets/textsketchy.cs" />
     <Compile Include="Assets/Assets/Packages/Tarodev 2D Controller/_Demo/Scripts/Lap.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
