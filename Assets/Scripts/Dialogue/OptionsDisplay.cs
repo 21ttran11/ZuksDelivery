@@ -1,18 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if USE_TMP
+using TMPro;
+#else
+using TextMeshProUGUI = TMPShim;
+#endif
 
-public class OptionsDisplay : MonoBehaviour
+namespace Yarn.Unity
 {
-    // Start is called before the first frame update
-    void Start()
+    public class OptionsBubbleView : DialogueViewBase
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] OptionView optionViewPrefab;
     }
 }
