@@ -5108,25 +5108,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1474055342072793257, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
   m_PrefabInstance: {fileID: 1748384113}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2027555057 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4960836991283245100, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
-  m_PrefabInstance: {fileID: 1101557060965261976}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2027555062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027555057}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9089354594c1f4b22ab0b0141a27fc61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wiggleSpeed: 0.5
-  wiggleAmount: 0.001
 --- !u!1 &2028656962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5708,7 @@ PrefabInstance:
     - target: {fileID: 338996292987680379, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: c5b953c41c145463e81f8d0ebf3d8d06, type: 2}
+      objectReference: {fileID: 2100000, guid: 4a86ddb524766419c886b31770e475e4, type: 2}
     - target: {fileID: 2200432662293441023, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
       propertyPath: m_SizeDelta.y
       value: 13.5
@@ -5895,10 +5876,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4960836991283245100, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2027555062}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073e073b38b6e461a9166357729e9fef, type: 3}
 --- !u!1 &5185236159842332082
 GameObject:
