@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -14,19 +15,26 @@ public class YarnInteractable : MonoBehaviour
     private string conversationStartNode;
 
     [SerializeField]
-    public DialogueRunner dialogueRunner;
+    private Dictionary<string, DialogueRunner> dialogueRunnersInScene = new Dictionary<string, DialogueRunner>();
 
     private bool interactable = true;
     private bool isCurrentConversation = false;
 
+    private DialogueRunner currentDialogueRunner;
+
     public void Start()
     {
-        dialogueRunner.onDialogueComplete.AddListener(EndConversation);
+        dialogueRunnersInScene = FindObjectsOfType<DialogueRunner>().ToDictionary(runner => runner.name, runner => runner);
+        foreach (DialogueRunner runner in dialogueRunnersInScene.Values) 
+        {
+            Debug.Log(runner);
+            //runner.onDialogueComplete.AddListener(EndConversation);
+        }
     }
 
     public void Update()
     {
-        if (interactable && !dialogueRunner.IsDialogueRunning)
+        if (interactable && !currentDialogueRunner.IsDialogueRunning)
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject));
             StartConversation();
@@ -37,7 +45,7 @@ public class YarnInteractable : MonoBehaviour
     {
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
-        dialogueRunner.StartDialogue(conversationStartNode);
+        currentDialogueRunner.StartDialogue(conversationStartNode);
     }
 
     private void EndConversation()
