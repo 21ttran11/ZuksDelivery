@@ -2139,7 +2139,6 @@ MonoBehaviour:
   pastObjects: []
   conversationStartNode: Raccoon_DillyDally
   yarnProject: {fileID: 0}
-  scriptName: 
 --- !u!1 &648357581
 GameObject:
   m_ObjectHideFlags: 0
@@ -4496,7 +4495,6 @@ MonoBehaviour:
   pastObjects: []
   conversationStartNode: Raccoon_1
   yarnProject: {fileID: 0}
-  scriptName: 
 --- !u!1 &1620848357
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,7 +5849,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2108600696}
   - component: {fileID: 2108600697}
-  - component: {fileID: 2108600698}
   m_Layer: 0
   m_Name: Dialogue2
   m_TagString: Untagged
@@ -5892,20 +5889,6 @@ MonoBehaviour:
   pastObjects: []
   conversationStartNode: Raccoon_2
   yarnProject: {fileID: 7545569452688597077, guid: 83160ef244b6a4d0a946f4bfb1f69d2b, type: 3}
-  scriptName: 
---- !u!114 &2108600698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108600695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c4732c6e6094517af308b642e70362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 445901503}
 --- !u!4 &2134609580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9133904696296678223, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}

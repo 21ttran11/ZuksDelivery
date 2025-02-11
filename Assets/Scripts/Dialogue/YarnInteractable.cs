@@ -30,6 +30,8 @@ public class YarnInteractable : MonoBehaviour
             var customView = runner.gameObject.AddComponent<CustomDialogueView>();
             runner.onDialogueComplete.AddListener(EndConversation);
         }
+
+        CustomDialogueView.reactivate += ReactivateAllDialogueRunners;
     }
 
     public void Update()
@@ -47,6 +49,13 @@ public class YarnInteractable : MonoBehaviour
         }
     }
 
+    private void ReactivateAllDialogueRunners()
+    {
+        foreach (DialogueRunner runner in dialogueRunnersInScene.Values)
+        {
+            runner.gameObject.SetActive(true);
+        }
+    }
     private void StartConversation(DialogueRunner runner)
     {
         isCurrentConversation = true;
