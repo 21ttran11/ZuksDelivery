@@ -25,27 +25,35 @@ public class YarnInteractable : MonoBehaviour
     public void Start()
     {
         dialogueRunnersInScene = FindObjectsOfType<DialogueRunner>().ToDictionary(runner => runner.name, runner => runner);
-        foreach (DialogueRunner runner in dialogueRunnersInScene.Values) 
+        foreach (var runner in dialogueRunnersInScene.Values)
         {
-            Debug.Log(runner);
-            //runner.onDialogueComplete.AddListener(EndConversation);
+            var customView = runner.gameObject.AddComponent<CustomDialogueView>();
+            customView.dialogueRunnersInScene = dialogueRunnersInScene;
+            runner.onDialogueComplete.AddListener(EndConversation);
         }
     }
 
     public void Update()
     {
-        if (interactable && !currentDialogueRunner.IsDialogueRunning)
+        if (interactable)
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject));
-            StartConversation();
+            foreach (var runner in dialogueRunnersInScene.Values)
+            {
+                if (!runner.IsDialogueRunning)
+                {
+                    StartConversation(runner);
+                    break;
+                }
+            }
         }
     }
 
-    private void StartConversation()
+    private void StartConversation(DialogueRunner runner)
     {
-        Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
-        currentDialogueRunner.StartDialogue(conversationStartNode);
+        Debug.Log($"Starting conversation on runner '{runner.name}' with node '{conversationStartNode}'.");
+        runner.StartDialogue(conversationStartNode);
     }
 
     private void EndConversation()
@@ -73,3 +81,4 @@ public class YarnInteractable : MonoBehaviour
     }
 
 }
+
