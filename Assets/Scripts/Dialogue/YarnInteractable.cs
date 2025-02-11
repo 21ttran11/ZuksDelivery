@@ -20,7 +20,7 @@ public class YarnInteractable : MonoBehaviour
     private bool interactable = true;
     private bool isCurrentConversation = false;
 
-    private DialogueRunner currentDialogueRunner;
+    public YarnProject yarnProject;
 
     public void Start()
     {
@@ -28,7 +28,6 @@ public class YarnInteractable : MonoBehaviour
         foreach (var runner in dialogueRunnersInScene.Values)
         {
             var customView = runner.gameObject.AddComponent<CustomDialogueView>();
-            customView.dialogueRunnersInScene = dialogueRunnersInScene;
             runner.onDialogueComplete.AddListener(EndConversation);
         }
     }
@@ -38,12 +37,11 @@ public class YarnInteractable : MonoBehaviour
         if (interactable)
         {
             EventBus.Publish(new InteractionEventData(true, this.gameObject));
-            foreach (var runner in dialogueRunnersInScene.Values)
+            foreach (DialogueRunner runner in dialogueRunnersInScene.Values)
             {
                 if (!runner.IsDialogueRunning)
                 {
                     StartConversation(runner);
-                    break;
                 }
             }
         }
@@ -55,7 +53,6 @@ public class YarnInteractable : MonoBehaviour
         Debug.Log($"Starting conversation on runner '{runner.name}' with node '{conversationStartNode}'.");
         runner.StartDialogue(conversationStartNode);
     }
-
     private void EndConversation()
     {
         if (isCurrentConversation)
