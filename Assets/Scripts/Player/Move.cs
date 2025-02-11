@@ -45,7 +45,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         direction.x = input.RetrieveMoveInput(gameObject);
-        desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
+        desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetGroundFriction(), 0f);
 
         if (direction.x != 0f && Mathf.Sign(transform.localScale.x) != Mathf.Sign(direction.x))
         {
@@ -66,7 +66,7 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        onGround = ground.GetOnGround();
+        onGround = ground.IsGrounded();
         animator.SetBool("Grounded", onGround);
         velocity = body.velocity;
 

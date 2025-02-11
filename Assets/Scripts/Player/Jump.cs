@@ -42,7 +42,7 @@ public class Jump : MonoBehaviour
 
     private void FixedUpdate()
     {
-        onGround = ground.GetOnGround();
+        onGround = ground.IsGrounded();
         velocity = body.velocity;
 
         if (onGround)
