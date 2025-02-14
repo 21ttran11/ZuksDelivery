@@ -3057,7 +3057,7 @@ MonoBehaviour:
   autoAdvance: 0
   palette: {fileID: 0}
   speechBubble: {fileID: 1252831117}
-  bubbleOffset: {x: 0, y: 0, z: 0}
+  bubbleOffset: {x: 2.5, y: 2, z: 0}
   dialogue: {fileID: 126186134}
   textLine: 
   characters:

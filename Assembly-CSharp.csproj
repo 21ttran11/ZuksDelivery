@@ -69,6 +69,7 @@
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Core\Character.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\BubbleAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
