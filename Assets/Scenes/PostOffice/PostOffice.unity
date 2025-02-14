@@ -3057,7 +3057,7 @@ MonoBehaviour:
   autoAdvance: 0
   palette: {fileID: 0}
   speechBubble: {fileID: 1252831117}
-  bubbleOffset: {x: 2.5, y: 2, z: 0}
+  bubbleOffset: {x: 0, y: 0, z: 0}
   dialogue: {fileID: 126186134}
   textLine: 
   characters:
@@ -5475,6 +5475,7 @@ GameObject:
   - component: {fileID: 2088637360}
   - component: {fileID: 2088637362}
   - component: {fileID: 2088637363}
+  - component: {fileID: 2088637364}
   m_Layer: 0
   m_Name: Raccoon
   m_TagString: Untagged
@@ -5583,6 +5584,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   talkingDuration: 0.4
+--- !u!61 &2088637364
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088637359}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.9, y: 3.52}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9, y: 3.52}
+  m_EdgeRadius: 0
 --- !u!1 &2101839807
 GameObject:
   m_ObjectHideFlags: 0
