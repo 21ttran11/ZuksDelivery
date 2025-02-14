@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class DialougeCanvasFollow : MonoBehaviour
 {
-    public Transform playerTransform; // Assign this in the inspector to the player's transform
-    public Vector3 offset; // Adjust this offset in the inspector to position the canvas above the player's head
+    public Transform playerTransform; 
+    public Vector3 offset;
 
     private void Update()
     {
         if (playerTransform != null)
         {
-            // Follow the player's position with the specified offset
             transform.position = playerTransform.position + offset;
         }
     }

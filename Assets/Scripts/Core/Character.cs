@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public string name;
-    public Vector3 offset; 
+    public string characterName;
+    public Vector3 offset;
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TarodevController;
 using TMPro;
 using UnityEngine;
 using Yarn.Unity;
@@ -12,33 +13,43 @@ public class SpeechBubbleView : LineView
     public TextMeshProUGUI dialogue;
     public string textLine;
 
-    public List<Transform> characters = new List<Transform>();
-
     public string speakerName;
+
+    public Character[] characters;
+    public Transform speakerTransform = null;
+
+    public void Awake()
+    {
+        characters = FindObjectsOfType<Character>();
+    }
+
+    private void Update()
+    {
+        if (speakerTransform != null)
+        {
+            speechBubble.transform.position = speakerTransform.position + bubbleOffset;
+        }
+    }
     public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
     {
         textLine = dialogueLine.Text.Text;
         speakerName = ParseName(textLine);
-        Transform speakerTransform = null;
 
         if (speakerName != null)
         {
-            foreach(Transform t in characters)
+            foreach(Character c in characters)
             {
-                if(t.name == speakerName)
+                if(c.characterName == speakerName)
                 {
-                    speakerTransform = t;
+                    speakerTransform = c.transform;
+                    bubbleOffset = c.offset;
                 }
             }
         }
 
-        if (speakerTransform != null)
-        {
-            speechBubble.transform.position = speakerTransform.position + bubbleOffset;
-            dialogue.text = dialogueLine.Text.ToString();
-        }
-
+        dialogue.text = dialogueLine.Text.ToString();
         speechBubble.SetActive(true);
+
         base.RunLine(dialogueLine, onDialogueLineFinished);
     }
 
