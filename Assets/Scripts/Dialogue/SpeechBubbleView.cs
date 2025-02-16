@@ -25,11 +25,16 @@ public class SpeechBubbleView : LineView
 
     private void Update()
     {
-        if (speakerTransform != null)
+        if (speakerTransform != null && bubbleOffset != null)
         {
             speechBubble.transform.position = speakerTransform.position + bubbleOffset;
         }
+        else
+        {
+            bubbleOffset = Vector3.zero;
+        }
     }
+
     public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
     {
         textLine = dialogueLine.Text.Text;
