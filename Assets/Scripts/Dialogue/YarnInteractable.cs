@@ -42,7 +42,6 @@ public class YarnInteractable : MonoBehaviour
 
     private void EndConversation()
     {
-        Debug.Log("Conversation ended");
         if (isCurrentConversation)
         {
             isCurrentConversation = false;

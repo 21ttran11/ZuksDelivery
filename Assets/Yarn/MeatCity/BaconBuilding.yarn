@@ -1,43 +1,43 @@
 ﻿title: BaconBuilding
 tags:
 ---
-zuk: Huh...This is a bacon building. A big bacon. 
+Zuk: Huh...This is a bacon building. A big bacon. 
 ===
 
 title: NikuNiku
 ---
-zuk: Niku Niku!? Man, I miss having a stan account...
+Zuk: Niku Niku!? Man, I miss having a stan account...
 ===
 
 title: Graffiti
 ---
-zuk: What the hell?! VANDALISM.
+Zuk: What the hell?! VANDALISM.
 ===
 
 title: Homecooked1
 ---
-guy: HEY YOU!
--> Huh...What do you want?
-guy: Get up here now, would ya?
--> Ugh, I'm not even getting paid for this...
+Carrot: HEY YOU!
+Zuk: Huh...What do you want?
+Carrot: Get up here now, would ya?
+Zuk: Ugh, I'm not even getting paid for this...
 ===
 
 title: Homecooked2
 ---
--> Hey...?
-guy: Yo! You made it!
-guy: Could you please grab my cat?
-guy: He's over there to the left!
--> Seriously? Fine...
+Zuk: Hey...?
+Carrot: Yo! You made it!
+Carrot: Could you please grab my cat?
+Carrot: He's over there to the left!
+Zuk: Seriously? Fine...
 ===
 
 title: Cat
 ---
--> Here, kitty kitty...
+Zuk: Here, kitty kitty...
 Cat: What the fuck man, that's not gonna lure me.
--> Holy shit, you can talk?!
+Zuk: Holy shit, you can talk?!
 Cat: Uh yeah...You haven't been to my motherland huh?
--> Where are you from?
+Zuk: Where are you from?
 Cat: The cat realm...duh. 
 Cat: Anyways, you've disrupted my peace. I will now self-destruct. 
 Cat: Gonna go see the boys. Peace out!
@@ -45,7 +45,7 @@ Cat: Gonna go see the boys. Peace out!
 
 title: Homecooked3
 ---
-guy: Did you find my cat?
+Carrot: Did you find my cat?
 -> Uh yeah...but he kind of disappeared?
     guy: What are you talking about?!
     <<jump Angry>> 
@@ -56,24 +56,24 @@ guy: Did you find my cat?
 
 title: Angry
 ---
-guy: You stole my cat, didn't you?!
--> Hell no. Man, I need to go now-
+Carrot: You stole my cat, didn't you?!
+Zuk: Hell no. Man, I need to go now-
 ===
 
 title: Sad
 ---
-guy: He HAS been off lately...
-guy: I must've done something to upset him.
--> Yeah, probably...Anyways, see ya!
+Carrot: He HAS been off lately...
+Carrot: I must've done something to upset him.
+Zuk: Yeah, probably...Anyways, see ya!
 ===
 
 title: Delivery
 ---
--> Are you Dr. Sir Loin Steak?
+Zuk: Are you Dr. Sir Loin Steak?
 Dr: Yes, I am. Why do you ask? 
--> Oh, I have a package for you!
+Zuk: Oh, I have a package for you!
 Dr: Ah yes, very well. I shall take it from you.
--> Yeah. Here you go!
+Zuk: Yeah. Here you go!
 Dr: Perfect, thank you kind carnivore! 
 Dr: You should hurry on back now, the sun is heading down.
 ===
@@ -86,11 +86,11 @@ Zuk: Let's start walking back.
 
 title: Vegan
 ---
--> These fucking vegans...hey! What the hell is this? 
-Vegan: You like it?
--> What? No! Ugh, carnivores would never. 
-Vegan: You wanna fight? 
--> You know what? One day, ya'll are gonna get jumped. 
-Vegan: Get my lawyer, right now!
--> Shit! Not the law! I gotta run, these heelies better still work!
+Zuk: These fucking vegans...hey! What the hell is this? 
+Vegan1: You like it?
+Zuk: What? No! Ugh, carnivores would never. 
+Vegan2: You wanna fight? 
+Zuk: You know what? One day, ya'll are gonna get jumped. 
+Vegan1: Get my lawyer, right now!
+Zuk: Shit! Not the law! I gotta run, these heelies better still work!
 ===

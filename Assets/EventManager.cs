@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    public static EventManager Instance { get; private set; }
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
     private void OnEnable()
     {
         EventBus.Subscribe("Activate", Activate);
