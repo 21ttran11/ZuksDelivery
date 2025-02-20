@@ -25,4 +25,5 @@ public class ActionPickUp : ActionDisplay
         EventBus.Publish(new EventData("Activate", objectToDisplay));
         Display();
     }
+
 }

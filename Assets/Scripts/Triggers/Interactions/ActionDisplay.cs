@@ -7,7 +7,7 @@ public class ActionDisplay : SceneAction
 {
     public GameObject objectToDisplay;
     private Vector3 originalScale;
-    private bool displaying = false;
+    public bool displaying = false;
 
     private void Start()
     {
