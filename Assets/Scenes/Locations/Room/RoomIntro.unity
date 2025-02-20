@@ -219,13 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29d2b802004a614ca8493cd1e83e094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotions:
-  - {fileID: 1505748407, guid: ab963a5898daa4ee3ad5d91e547af4fc, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  emotions: []
 --- !u!1 &294350565
 GameObject:
   m_ObjectHideFlags: 0
