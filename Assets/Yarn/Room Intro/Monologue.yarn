@@ -1,20 +1,25 @@
 ﻿title: Monologue
 tags:
 ---
+<<Express ZukMirror Neutral_1>>
 Zuk: The name’s Zuk, short for Zucchini.
 Zuk: Yeah, like the veggie...
 Zuk: And Like everyone, I too search for a purpose
 Zuk: …my own purpose.
 Zuk: But, we gotta make bank too.
 Zuk: That’s why, I just landed a part-time job as a delivery driver!
+<<Express ZukMirror Pondering_1>>
 Mom: Zuk can barely survive a crosswalk...
-Mom: I don’t know how he thinks he can pull this off-
+Mom: I don’t know how he thinks he can pull this off
+<<Express ZukMirror TalkingBack_1>>
 Zuk2: Moomm, Ahem...
 <<wait 1>>
+<<Express ZukMirror Pleased_1>>
 Zuk: But alas…this is now my purpose.
 Zuk2: Kind of lame, but it’s just me, and my fellow carnivores
 Zuk2: against the true enemy…
 Zuk: The Vegans!
+<<Express ZukMirror Smug_1>>
 Zuk3: So, be afraid.
 Zuk3: Be very afraid.
 <<wait 2>>

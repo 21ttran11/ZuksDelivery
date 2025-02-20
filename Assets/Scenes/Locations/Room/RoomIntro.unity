@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 151833804}
   - component: {fileID: 151833806}
   m_Layer: 0
-  m_Name: MirrorZuk
+  m_Name: ZukMirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,12 +181,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2064281716, guid: 403cbd09e407347c3bd53bd2e52c6fe5, type: 3}
+  m_Sprite: {fileID: -645483173, guid: 403cbd09e407347c3bd53bd2e52c6fe5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.06, y: 0.07}
+  m_Size: {x: 4.76, y: 9.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -219,7 +219,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29d2b802004a614ca8493cd1e83e094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotions: []
+  emotions:
+  - {fileID: -645483173, guid: 403cbd09e407347c3bd53bd2e52c6fe5, type: 3}
+  - {fileID: 1176161743, guid: ab963a5898daa4ee3ad5d91e547af4fc, type: 3}
+  - {fileID: 268931639, guid: be5b071d6119b4639a453704f1f7ffd9, type: 3}
+  - {fileID: 284741898, guid: 5906f91e9fd3744d48bb3ccddc12bb8b, type: 3}
+  - {fileID: 1857391978, guid: ccfb5a63523244539913e508620057d9, type: 3}
+  - {fileID: -1897317036, guid: 7a4fc9c49f0c947ef970ecbf502df15a, type: 3}
 --- !u!1 &294350565
 GameObject:
   m_ObjectHideFlags: 0
