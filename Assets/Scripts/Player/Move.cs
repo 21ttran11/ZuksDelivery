@@ -14,6 +14,7 @@ public class Move : MonoBehaviour
     private Vector2 velocity;
     private Rigidbody2D body;
     private Ground ground;
+    private Jump jump; 
 
     private float maxSpeedChange;
     private float acceleration;
@@ -33,6 +34,7 @@ public class Move : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        jump = GetComponent<Jump>(); 
         orgSpeed = maxSpeed;
     }
 
@@ -41,7 +43,6 @@ public class Move : MonoBehaviour
         StartCoroutine(PlayFootstepSounds());
     }
 
-    // Update is called once per frame
     void Update()
     {
         direction.x = input.RetrieveMoveInput(gameObject);
@@ -52,7 +53,7 @@ public class Move : MonoBehaviour
             FlipCharacter();
         }
 
-        if(Input.GetKey(KeyCode.LeftShift) && canSprint)
+        if (Input.GetKey(KeyCode.LeftShift) && canSprint)
         {
             maxSpeed = sprintSpeed;
             animator.SetBool("Skating", true);
@@ -66,7 +67,7 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        onGround = ground.IsGrounded();
+        onGround = ground.IsGrounded() && !jump.IsJumpBufferActive;
         animator.SetBool("Grounded", onGround);
         velocity = body.velocity;
 
@@ -82,8 +83,6 @@ public class Move : MonoBehaviour
     {
         if (maxSpeed <= 0)
             return;
-
-        // Flip the character by scaling
         Vector3 flippedScale = transform.localScale;
         flippedScale.x = -flippedScale.x;
         transform.localScale = flippedScale;
@@ -95,12 +94,12 @@ public class Move : MonoBehaviour
 
         while (true)
         {
-            if (onGround && Mathf.Abs(velocity.x) > 0.1f) 
+            if (onGround && Mathf.Abs(velocity.x) > 0.1f)
             {
                 if (!isPlaying)
                 {
-                    if(AudioManager.instance != null)
-                        AudioManager.PlaySFX(footstepStringSfx, footstepVolume,true, footstepPitchVolume); 
+                    if (AudioManager.instance != null)
+                        AudioManager.PlaySFX(footstepStringSfx, footstepVolume, true, footstepPitchVolume);
                     isPlaying = true;
                 }
             }
@@ -114,11 +113,7 @@ public class Move : MonoBehaviour
                 }
             }
 
-            yield return null; 
+            yield return null;
         }
     }
-
-
-
-
 }

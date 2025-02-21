@@ -13042,8 +13042,8 @@ Transform:
   m_GameObject: {fileID: 1509814578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.026, y: 1.737, z: -0.022369446}
-  m_LocalScale: {x: 1.4445355, y: 0.5840139, z: 1}
+  m_LocalPosition: {x: 12.2496, y: 1.737, z: -0.022369446}
+  m_LocalScale: {x: 1.8917637, y: 0.5840139, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1827213067}
@@ -18187,7 +18187,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2048
-  groundCheckRadius: 0.5
+  groundCheckRadius: 0.7
   groundCheckDistance: 1
   slopeLimit: 0
   groundRayCount: 2
@@ -18295,7 +18295,10 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: 2ef497146d00bfb48adc28aca90d0b33, type: 2}
   jumpHeight: 9
   maxAirJumps: 0
-  upwardMovementMultiplier: 1.8
+  upwardMovementMultiplier: 2.32
+  jumpBufferDuration: 0.5
+  landingBufferTime: 0.5
+  downwardMovementMultiplier: 3
 --- !u!114 &9182091218396923381
 MonoBehaviour:
   m_ObjectHideFlags: 0

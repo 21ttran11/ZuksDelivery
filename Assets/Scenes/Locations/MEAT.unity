@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -467,7 +466,7 @@ GameObject:
   - component: {fileID: 56745127}
   - component: {fileID: 56745129}
   - component: {fileID: 56745128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1678,7 @@ GameObject:
   - component: {fileID: 297045295}
   - component: {fileID: 297045297}
   - component: {fileID: 297045296}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1841,7 +1840,7 @@ GameObject:
   - component: {fileID: 300255959}
   - component: {fileID: 300255961}
   - component: {fileID: 300255960}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3036,7 +3035,7 @@ Transform:
   m_GameObject: {fileID: 456413800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.036935, y: -1.29, z: -0.022369446}
+  m_LocalPosition: {x: 7.889563, y: -1.29, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4795,7 +4794,7 @@ GameObject:
   - component: {fileID: 775341983}
   - component: {fileID: 775341985}
   - component: {fileID: 775341984}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4892,7 +4891,7 @@ GameObject:
   - component: {fileID: 800182951}
   - component: {fileID: 800182953}
   - component: {fileID: 800182952}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5159,7 +5158,7 @@ Transform:
   m_GameObject: {fileID: 819665003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6283026, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 5.3335595, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5241,7 +5240,7 @@ GameObject:
   - component: {fileID: 821863510}
   - component: {fileID: 821863512}
   - component: {fileID: 821863511}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5338,7 +5337,7 @@ GameObject:
   - component: {fileID: 841897032}
   - component: {fileID: 841897034}
   - component: {fileID: 841897033}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5519,7 +5518,7 @@ GameObject:
   - component: {fileID: 858642160}
   - component: {fileID: 858642162}
   - component: {fileID: 858642161}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5725,7 +5724,7 @@ GameObject:
   - component: {fileID: 894008286}
   - component: {fileID: 894008288}
   - component: {fileID: 894008287}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6696,7 +6695,7 @@ GameObject:
   - component: {fileID: 1078251363}
   - component: {fileID: 1078251365}
   - component: {fileID: 1078251364}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7374,7 +7373,7 @@ GameObject:
   - component: {fileID: 1205176219}
   - component: {fileID: 1205176221}
   - component: {fileID: 1205176220}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7471,7 +7470,7 @@ GameObject:
   - component: {fileID: 1206196159}
   - component: {fileID: 1206196161}
   - component: {fileID: 1206196160}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7679,7 +7678,7 @@ GameObject:
   - component: {fileID: 1226183137}
   - component: {fileID: 1226183139}
   - component: {fileID: 1226183138}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7781,7 +7780,7 @@ GameObject:
   - component: {fileID: 1264331578}
   - component: {fileID: 1264331580}
   - component: {fileID: 1264331579}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7878,7 +7877,7 @@ GameObject:
   - component: {fileID: 1267898356}
   - component: {fileID: 1267898358}
   - component: {fileID: 1267898357}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8030,8 +8029,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.011600018, y: 0.12519997, z: 0}
-    m_Extent: {x: 2.5725, y: 1.4171, z: 0}
+    m_Center: {x: 0.015849948, y: 0.12735003, z: 0}
+    m_Extent: {x: 2.5690498, y: 1.4117501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8751,7 +8750,7 @@ GameObject:
   - component: {fileID: 1354927469}
   - component: {fileID: 1354927471}
   - component: {fileID: 1354927470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9307,7 +9306,7 @@ GameObject:
   - component: {fileID: 1404403491}
   - component: {fileID: 1404403493}
   - component: {fileID: 1404403492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9404,7 +9403,7 @@ GameObject:
   - component: {fileID: 1412852180}
   - component: {fileID: 1412852182}
   - component: {fileID: 1412852181}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9585,6 +9584,7 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 962141903}
   m_Damping: 0.5
   m_MaxWindowSize: -1
+  m_Padding: 0
 --- !u!114 &1466915990 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4720536960264171791, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
@@ -9809,7 +9809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568779766}
   - component: {fileID: 1568779767}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9907,7 +9907,7 @@ Transform:
   m_GameObject: {fileID: 1569196297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.720418, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 6.8361883, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10095,7 +10095,7 @@ Transform:
   m_GameObject: {fileID: 1595696947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.04808, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 8.574364, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10758,7 +10758,7 @@ Transform:
   m_GameObject: {fileID: 1687597281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5566015, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 5.967115, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11131,11 +11131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5140119
+      value: -1.4334207
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.495216
+      value: 10.497316
       objectReference: {fileID: 0}
     - target: {fileID: 9133904696296678223, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11219,7 +11219,7 @@ GameObject:
   - component: {fileID: 1751591520}
   - component: {fileID: 1751591522}
   - component: {fileID: 1751591521}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11414,7 +11414,7 @@ Transform:
   m_GameObject: {fileID: 1780787199}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.884251, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 7.7052774, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12193,7 +12193,7 @@ GameObject:
   - component: {fileID: 1881446327}
   - component: {fileID: 1881446328}
   - component: {fileID: 1881446329}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor - 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12323,7 +12323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1882466803}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12445,7 +12445,7 @@ Transform:
   m_GameObject: {fileID: 1957193321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9993744, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 7.8520026, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12796,7 +12796,7 @@ GameObject:
   - component: {fileID: 2121297239}
   - component: {fileID: 2121297241}
   - component: {fileID: 2121297240}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12897,7 +12897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142816100}
   - component: {fileID: 2142816101}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13012,7 +13012,7 @@ MonoBehaviour:
   maxSpeed: 5
   maxAcceleration: 35
   maxAirAcceleration: 20
-  sprintSpeed: 6
+  sprintSpeed: 8
   canSprint: 1
   footstepStringSfx: s_walking_meat
   footstepVolume: 0.5
@@ -13695,7 +13695,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd2bf812019fb64fbe3d4f1028fa3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxGroundNormalY: 0.7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  groundCheckRadius: 0.7
+  groundCheckDistance: 1
+  slopeLimit: 0.7
+  groundRayCount: 3
+  groundCheckOffset: {x: 0, y: -1.15}
+  groundCheckWidth: 0.8
+  showDebugGizmos: 1
 --- !u!212 &8630214254324285052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13795,9 +13804,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 2ef497146d00bfb48adc28aca90d0b33, type: 2}
-  jumpHeight: 9
+  jumpHeight: 10
   maxAirJumps: 0
   upwardMovementMultiplier: 1.8
+  jumpBufferDuration: 0.6
+  landingBufferTime: 0.6
+  downwardMovementMultiplier: 3
 --- !u!114 &9182091218396923381
 MonoBehaviour:
   m_ObjectHideFlags: 0

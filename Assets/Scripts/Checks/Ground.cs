@@ -93,11 +93,9 @@ public class Ground : MonoBehaviour
         
         Vector2 position = (Vector2)transform.position + groundCheckOffset;
         
-        // Draw ground check sphere
         Gizmos.color = isGrounded ? Color.green : Color.red;
         Gizmos.DrawWireSphere(position, groundCheckRadius);
         
-        // Draw ground check rays
         float startX = position.x - groundCheckWidth / 2;
         float endX = position.x + groundCheckWidth / 2;
         
