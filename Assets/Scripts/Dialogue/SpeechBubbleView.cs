@@ -41,9 +41,14 @@ public class SpeechBubbleView : LineView
 
         if (ColorUtility.TryParseHtmlString(bubbleColorCode, out Color newColor))
         {
-
-            bubbleImage.color = newColor;
-            pointerImage.color = newColor;
+            if (bubbleImage != null)
+            {
+                bubbleImage.color = newColor;
+            }
+            if (pointerImage != null)
+            {
+                pointerImage.color = newColor;
+            }
         }
     }
 
@@ -60,7 +65,6 @@ public class SpeechBubbleView : LineView
                 {
                     speakerTransform = c.transform;
                     bubbleOffset = c.offset;
-                    Debug.Log(bubbleOffset);
                     bubbleColorCode = c.color;
                 }
             }

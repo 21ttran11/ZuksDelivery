@@ -235,6 +235,9 @@ MonoBehaviour:
   bubbleOffset: {x: 0, y: 0, z: 0}
   dialogue: {fileID: 2724418597224408116}
   textLine: 
+  bubbleImage: {fileID: 338996292987680379}
+  pointerImage: {fileID: 3326718056826966361}
+  bubbleColorCode: 
   speakerName: 
   characters: []
   speakerTransform: {fileID: 0}
