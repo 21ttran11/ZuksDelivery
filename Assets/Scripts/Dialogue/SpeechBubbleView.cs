@@ -5,6 +5,7 @@ using TarodevController;
 using TMPro;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.UI;
 
 public class SpeechBubbleView : LineView
 {
@@ -12,6 +13,10 @@ public class SpeechBubbleView : LineView
     public Vector3 bubbleOffset;
     public TextMeshProUGUI dialogue;
     public string textLine;
+
+    public Image bubbleImage;
+    public Image pointerImage;
+    public string bubbleColorCode;
 
     public string speakerName;
     public Character[] characters;
@@ -28,9 +33,17 @@ public class SpeechBubbleView : LineView
         {
             speechBubble.transform.position = speakerTransform.position + bubbleOffset;
         }
+
         else
         {
             bubbleOffset = Vector3.zero;
+        }
+
+        if (ColorUtility.TryParseHtmlString(bubbleColorCode, out Color newColor))
+        {
+
+            bubbleImage.color = newColor;
+            pointerImage.color = newColor;
         }
     }
 
@@ -47,6 +60,8 @@ public class SpeechBubbleView : LineView
                 {
                     speakerTransform = c.transform;
                     bubbleOffset = c.offset;
+                    Debug.Log(bubbleOffset);
+                    bubbleColorCode = c.color;
                 }
             }
         }
