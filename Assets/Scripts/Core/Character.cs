@@ -5,6 +5,6 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public string characterName;
-    public Material characterMaterial;
+    public string color;
     public Vector3 offset;
 }

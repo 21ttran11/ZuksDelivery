@@ -14,7 +14,6 @@ public class SpeechBubbleView : LineView
     public string textLine;
 
     public string speakerName;
-    public Material bubbleMaterial;
     public Character[] characters;
     public Transform speakerTransform = null;
 
@@ -28,12 +27,6 @@ public class SpeechBubbleView : LineView
         if (speakerTransform != null && bubbleOffset != null)
         {
             speechBubble.transform.position = speakerTransform.position + bubbleOffset;
-        }
-        if (bubbleMaterial != null)
-        {
-            Debug.Log("Changing speech bubble material");
-            Renderer renderer = this.gameObject.GetComponentInChildren<Renderer>();
-            renderer.material = bubbleMaterial;
         }
         else
         {
@@ -54,7 +47,6 @@ public class SpeechBubbleView : LineView
                 {
                     speakerTransform = c.transform;
                     bubbleOffset = c.offset;
-                    bubbleMaterial = c.characterMaterial;
                 }
             }
         }
