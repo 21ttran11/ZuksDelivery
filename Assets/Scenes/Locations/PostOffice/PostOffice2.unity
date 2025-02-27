@@ -2325,6 +2325,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3326718056826966361, guid: a52de764436b97245982f0f411a88b6f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47f8bf5858447ac43b022e6e541d9b73, type: 3}
     - target: {fileID: 4526270655029238625, guid: a52de764436b97245982f0f411a88b6f, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
