@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Zuk
-  color: 
+  color: '#000000'
   offset: {x: 0, y: 0, z: 0}
 --- !u!4 &1817229414
 Transform:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Zuk2
-  color: 
+  color: '#000000'
   offset: {x: 0, y: 0, z: 0}
 --- !u!4 &1900853659
 Transform:
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Zuk3
-  color: 
+  color: '#000000'
   offset: {x: 0, y: 0, z: 0}
 --- !u!4 &2029191952
 Transform:

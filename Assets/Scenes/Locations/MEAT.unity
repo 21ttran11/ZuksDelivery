@@ -1701,7 +1701,7 @@ Transform:
   m_GameObject: {fileID: 456413800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8883324, y: -1.29, z: -0.022369446}
+  m_LocalPosition: {x: 7.8882403, y: -1.29, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1892,6 +1892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Cat
+  color: 
   offset: {x: 0, y: 2, z: 0}
 --- !u!1001 &542120029
 PrefabInstance:
@@ -2468,6 +2469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Dr
+  color: 
   offset: {x: -1, y: 3, z: 0}
 --- !u!1 &710821335
 GameObject:
@@ -2951,7 +2953,7 @@ Transform:
   m_GameObject: {fileID: 819665003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3310976, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 5.330914, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3519,6 +3521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Vegan1
+  color: 
   offset: {x: 0, y: 2, z: 0}
 --- !u!1 &894008285
 GameObject:
@@ -3792,6 +3795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Vegan2
+  color: 
   offset: {x: 0, y: 3.5, z: 0}
 --- !u!1 &948663171 stripped
 GameObject:
@@ -6990,6 +6994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Carrot
+  color: 
   offset: {x: 0, y: 3, z: 0}
 --- !u!1 &1568779765
 GameObject:
@@ -7099,7 +7104,7 @@ Transform:
   m_GameObject: {fileID: 1569196297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.8288026, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 6.828252, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7249,7 +7254,7 @@ Transform:
   m_GameObject: {fileID: 1595696947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.562054, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 8.561136, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7864,7 +7869,7 @@ Transform:
   m_GameObject: {fileID: 1687597281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.962191, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 5.961824, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8004,11 +8009,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4425025
+      value: -1.4443383
       objectReference: {fileID: 0}
     - target: {fileID: 6044399241188765320, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.497316
+      value: 10.497307
       objectReference: {fileID: 0}
     - target: {fileID: 9133904696296678223, guid: 8a4b8c05f947642fb8afc71867ac8d8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8287,7 +8292,7 @@ Transform:
   m_GameObject: {fileID: 1780787199}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.69543, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 7.6946955, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8784,7 +8789,7 @@ Transform:
   m_GameObject: {fileID: 1957193321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.850772, y: -0.71, z: -0.022369446}
+  m_LocalPosition: {x: 7.85068, y: -0.71, z: -0.022369446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10006,6 +10011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Zuk
+  color: '#000000'
   offset: {x: 0, y: 4, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
