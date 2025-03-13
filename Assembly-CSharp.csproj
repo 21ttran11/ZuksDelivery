@@ -68,6 +68,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\LineViewWrapper.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\Core\Character.cs" />
     <Compile Include="Assets\Assets\Packages\Tarodev 2D Controller\Scripts\PlayerAnimator.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\InteractionManager.cs" />
     <Compile Include="Assets\Scripts\Locker Game\HeelieEnd.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\SpeechBubbleOptionsView.cs" />
     <Compile Include="Assets\Scripts\UI\VisibleCursor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />

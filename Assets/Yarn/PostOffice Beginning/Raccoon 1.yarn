@@ -4,9 +4,12 @@ tags:
 <<Talking Raccoon>>
 Raccoon: Look who's finally here!
 <<DoneTalking Raccoon>>
-Zuk: I'm only 2 hours late...
-<<Talking Raccoon>>
-Raccoon: Yeah, yeah...
+	-> Zuk: I'm only 2 hours late...
+		<<Talking Raccoon>>
+		Raccoon: Yeah, yeah...
+	-> Zuk: Who?
+		<<Talking Raccoon>>
+		Raccoon: You! Dumbass!
 Raccoon: Anyways, go pick up your package, quick. 
 Raccoon: And talk to me afterwards!
 <<DoneTalking Raccoon>>
