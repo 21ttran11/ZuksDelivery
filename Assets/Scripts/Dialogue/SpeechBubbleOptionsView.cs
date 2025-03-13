@@ -86,7 +86,6 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
         }
 
         dialogue.text = currentOption.Line.TextWithoutCharacterName.Text;
-        Debug.Log("Displaying " + currentOption);
 
         speechBubble.SetActive(true);
     }
@@ -112,14 +111,12 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
     private void MoveToNextOption()
     {
         currentOptionIndex = (currentOptionIndex + 1) % currentOptions.Length;
-        Debug.Log("Updating option: " + currentOptionIndex);
         ShowCurrentOption();
     }
 
     private void MoveToPreviousOption()
     {
         currentOptionIndex = (currentOptionIndex - 1 + currentOptions.Length) % currentOptions.Length;
-        Debug.Log("Updating option: " + currentOptionIndex);
         ShowCurrentOption();
     }
 
