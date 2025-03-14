@@ -70,15 +70,7 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
         speakerName = ParseName(currentOption.Line.Text.Text);
         if (speakerName != null && characters != null)
         {
-            foreach (Character c in characters)
-            {
-                if (c != null && c.characterName == speakerName)
-                {
-                    speakerTransform = c.transform;
-                    bubbleOffset = c.offset;
-                    bubbleColorCode = c.color;
-                }
-            }
+            base.updateBubble();
         }
         else
         {
