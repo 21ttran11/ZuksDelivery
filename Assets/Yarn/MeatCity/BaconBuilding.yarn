@@ -46,10 +46,10 @@ Cat: Gonna go see the boys. Peace out!
 title: Homecooked3
 ---
 Carrot: Did you find my cat?
--> Uh yeah...but he kind of disappeared?
+-> Zuk: Uh yeah...but he kind of disappeared?
     guy: What are you talking about?!
     <<jump Angry>> 
--> Nope! You lied, he wasn't there.
+-> Zuk: Nope! You lied, he wasn't there.
     guy: He must've gotten lost...
     <<jump Sad>>
 ===

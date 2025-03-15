@@ -75,6 +75,8 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
         else
         {
             Debug.LogWarning("speakerName is null or characters array is not populated.");
+            Debug.Log(speakerName);
+            Debug.Log(characters);
         }
 
         dialogue.text = currentOption.Line.TextWithoutCharacterName.Text;
