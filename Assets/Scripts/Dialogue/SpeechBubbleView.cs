@@ -25,6 +25,10 @@ public class SpeechBubbleView : LineView
     public void Awake()
     {
         characters = FindObjectsOfType<Character>();
+        foreach(Character c in characters)
+        {
+            Debug.Log(c.name);
+        }
     }
 
     private void Update()
