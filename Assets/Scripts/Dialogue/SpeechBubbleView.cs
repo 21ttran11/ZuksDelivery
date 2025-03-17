@@ -57,11 +57,21 @@ public class SpeechBubbleView : LineView
         textLine = dialogueLine.Text.Text;
         speakerName = ParseName(textLine);
 
+        updateBubble();
+
+        dialogue.text = dialogueLine.Text.ToString();
+        speechBubble.SetActive(true);
+
+        base.RunLine(dialogueLine, onDialogueLineFinished);
+    }
+
+    public void updateBubble()
+    {
         if (speakerName != null)
         {
-            foreach(Character c in characters)
+            foreach (Character c in characters)
             {
-                if(c.characterName == speakerName)
+                if (c.characterName == speakerName)
                 {
                     speakerTransform = c.transform;
                     bubbleOffset = c.offset;
@@ -69,11 +79,6 @@ public class SpeechBubbleView : LineView
                 }
             }
         }
-
-        dialogue.text = dialogueLine.Text.ToString();
-        speechBubble.SetActive(true);
-
-        base.RunLine(dialogueLine, onDialogueLineFinished);
     }
 
     public string ParseName(string lineText)
