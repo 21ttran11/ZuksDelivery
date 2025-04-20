@@ -4,10 +4,21 @@ tags:
 Mom: Wow, you're finally home!
 Mom: Thought you'd come home sooner...
 Mom: I figured you would have been fired!
-===
 
-title: Zuk
----
+<<Express ZukMirror TalkingBack_1>>
 Zuk: I was NOT fired.
 Zuk: Ugh...
+
+<<wait 1>>
+<<Express ZukMirror Smug_1>>
+Zuk1: Another day...Another slay.
+
+<<wait 1>>
+<<Express ZukMirror Pondering_1>>
+Zuk2: I did not think this through...huh.
+<<wait 1>>
+<<Express ZukMirror Pleased_1>>
+Zuk3: A vegan may have ruined my day, but he can't ruin my night!
 ===
+
+
