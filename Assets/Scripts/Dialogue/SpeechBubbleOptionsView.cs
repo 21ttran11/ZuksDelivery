@@ -30,7 +30,6 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
         }
     }
 
-
     public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
     {
         Debug.Log("RunOptions called with " + dialogueOptions.Length + " options.");
@@ -40,7 +39,6 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
         currentOptionIndex = 0;
         ShowCurrentOption();
     }
-
     public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
     {
         onDialogueLineFinished();

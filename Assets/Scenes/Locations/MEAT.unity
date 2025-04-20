@@ -914,6 +914,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117959144}
     m_Modifications:
+    - target: {fileID: 185964100354046220, guid: c1b9de1ac65754c4fb8f316bac176e86, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 543825763964591996, guid: c1b9de1ac65754c4fb8f316bac176e86, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2005,7 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Cat
-  color: 
+  color: '#9a07ad'
   offset: {x: 0, y: 2, z: 0}
 --- !u!1001 &542120029
 PrefabInstance:
@@ -7119,7 +7123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Carrot
-  color: 
+  color: '#d66718'
   offset: {x: 0, y: 3, z: 0}
 --- !u!1 &1568779765
 GameObject:
