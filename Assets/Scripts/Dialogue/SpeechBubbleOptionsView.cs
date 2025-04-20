@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using Yarn.Unity;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class SpeechBubbleOptionsView : SpeechBubbleView
 {
@@ -16,6 +17,12 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
     private int currentOptionIndex = 0;
     private Action<int> onOptionSelected;
 
+    private CanvasGroup canvasGroup;
+    private void Start()
+    {
+        canvasGroup = gameObject.GetComponent<CanvasGroup>();
+
+    }
     private void Update()
     {
         // Handle input for navigating and selecting options
@@ -28,6 +35,8 @@ public class SpeechBubbleOptionsView : SpeechBubbleView
         {
             speechBubble.transform.position = speakerTransform.position + bubbleOffset;
         }
+
+        canvasGroup.alpha = 1;
     }
 
     public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
