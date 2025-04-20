@@ -43,7 +43,6 @@ public class HeelieChangeScene : MonoBehaviour
     private void Update()
     {
         mainCamera = Camera.main;
-        Debug.Log(heelies.activeSelf);
 
         if (roachesKilled)
         {

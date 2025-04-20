@@ -27,11 +27,6 @@ public class RoachHandler : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    private void Update()
-    {
-        Debug.Log(roachKilled);
-    }
-
     private void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
