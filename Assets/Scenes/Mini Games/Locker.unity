@@ -4742,7 +4742,7 @@ MonoBehaviour:
   progressionObjects: []
   pastObjects: []
   conversationStartNode: Roach
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1178514077}
 --- !u!4 &2023150840
 Transform:
   m_ObjectHideFlags: 0
@@ -5015,7 +5015,7 @@ MonoBehaviour:
   progressionObjects: []
   pastObjects: []
   conversationStartNode: Dropped
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1178514077}
 --- !u!4 &2096808613
 Transform:
   m_ObjectHideFlags: 0
